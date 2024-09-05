@@ -64,7 +64,10 @@ Screenreader
 - De linkjes werden ook niet opgenoemd waar je dan heen zou gaan, er werd alleen gezegt dat je op een linkje staat. 
 
 WCAG checklist
-
+- Tijdens de WCAG checklist ben ik erachter gekomen dat ze hun code niet mooi hebben opgemaakt, zo gebruiken  ze alleen maar div.
+- Ook hebben ze geen url bij img.
+- Gebruiken ze geen button tags voor buttens.
+- Hebben ze meerdere H1 op 1 pagina. 
 
 </details>
 
