@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   HayDay home
-  <img src="readme-images/haydayhome.png" width="375px" alt="Hayday homepagina">
+  <img src="readme-images/homepagina.png" width="375px" alt="Hayday homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/haydaydownload.png" width="375px" alt="Hayday download pagina recept>
+  <img src="readme-images/privacypolicy.png" width="375px" alt="Hayday privacy policy pagina>
  
 </details>
 
@@ -57,6 +57,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+Screenreader
+- Na de test kwam vooral naar voren dat plaatjes geen alt hebben waardoor je niet kan weten wat de afbeeldingen zijn.
+- Ook werden paragrafen niet in ene opgelezen maar moest je elke keer naar beneden klikken om de rest van de regels tekst te laten voorlezen. 
+- De linkjes werden ook niet opgenoemd waar je dan heen zou gaan, er werd alleen gezegt dat je op een linkje staat. 
+
+WCAG checklist
+- Tijdens de WCAG checklist ben ik erachter gekomen dat ze hun code niet mooi hebben opgemaakt, zo gebruiken  ze alleen maar div.
+- Ook hebben ze geen url bij img.
+- Gebruiken ze geen button tags voor buttens.
+- Hebben ze meerdere H1 op 1 pagina. 
 
 </details>
 
