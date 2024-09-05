@@ -43,11 +43,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/homepagina.png" width="375px" alt="Hayday homepagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
+ Hay Day privacy policy pagina  
   
   <img src="readme-images/privacypolicy.png" width="375px" alt="Hayday privacy policy pagina">
 
-  <img src="readme-images/privacypolicy.png" width="375px" alt="Hayday privacy policy pagina">
 
  
 </details>
