@@ -1,0 +1,46 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+main {
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+  }
+
+/****************/
+/* Section 1 */
+/****************/
+
+section:nth-of-type(1){
+	display: grid;
+	position:relative;
+	
+}
+
+section:nth-of-type(1) video{
+	object-fit: cover;
+	z-index: 10;
+  }
+
+/* jouw code */
+
+
