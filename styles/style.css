@@ -6,26 +6,128 @@
 }
 
 
-
-
-
-
 /*********************/
-/* CUSTOM PROPERTIES */
+/* Kleuren */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-zwart:#000000;
+	--color-wit:#eee;
+	--color-blauweSchaduw:rgb(19, 45, 99);
 }
 
+/*********************/
+/* Fonts */
+/*********************/
+@font-face {
+	font-family: paragraaf;
+	src: url(../fonts/CCBackBeat.2bb42b5.woff2);
+}
+
+@font-face {
+	font-family: bodySchrift;
+	src: url(../fonts/Lobster.8c78a5c.woff2);
+}
+
+@font-face {
+	font-family: kopjes;
+	src: url(../fonts/SCSecretOriginsBB.af4f153.woff2);
+}
+
+@font-face {
+	font-family: footer;
+	src: url(../fonts/SupercellText-Medium.1919815.woff2);
+}
+
+/*********************/
+/* main */
+/*********************/
+main {
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+	overflow-x: hidden ;
+  }
 
 
+/*********************/
+/* body */
+/*********************/
 
+body{
+	margin: 0;
+	padding: 0;
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+h1{
+font-family: kopjes;
+	font-size: 4em;
+	color: var(--color-wit);
+	text-decoration-style: solid;
+	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
+				 var(--color-blauweSchaduw) 0px -1.5px 0px,
+				 var(--color-blauweSchaduw) 1.5px -1.5px 0px,
+				 var(--color-blauweSchaduw) 1.5px 0px 0px,
+				 var(--color-blauweSchaduw) 1.5px 1.5px 0px,
+				 var(--color-blauweSchaduw) 0px 1.5px 0px,
+				 var(--color-blauweSchaduw) -1.5px 1.5px 0px,
+				 var(--color-blauweSchaduw) -1.5px 0px 0px,
+				 var(--color-blauweSchaduw) 0px 4px 0px,
+				 var(--color-blauweSchaduw) -1.5px 4px 0px,
+				 var(--color-blauweSchaduw) 1.5px 4px 0px,
+				 var(--color-blauweSchaduw) 3px 3px 3px;
+	/* text-shadow: rgb(19, 45, 99) -1.5px -1.5px 0px, 
+					rgb(19, 45, 99) 0px -1.5px 0px, 
+					rgb(19, 45, 99) 1.5px -1.5px 0px, 
+					rgb(19, 45, 99) 1.5px 0px 0px, 
+					rgb(19, 45, 99) 1.5px 1.5px 0px, 
+					rgb(19, 45, 99) 0px 1.5px 0px, 
+					rgb(19, 45, 99) -1.5px 1.5px 0px, 
+					rgb(19, 45, 99) -1.5px 0px 0px, 
+					rgb(19, 45, 99) 0px 4px 0px, 
+					rgb(19, 45, 99) -1.5px 4px 0px, 
+					rgb(19, 45, 99) 1.5px 4px 0px, 
+					rgba(0, 0, 0, 0.5) 3px 3px 3px;
+	tekst schaduw gepakt van de website, zodat hij het zelfde word als de website, de code veranderd tot goeie */
+	text-align: center;
+}
 
-/* jouw code */
+h2{
+	font-family: kopjes;
+		font-size: 3em;
+		color: var(--color-wit);
+		text-decoration-style: solid;
+		text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
+					 var(--color-blauweSchaduw) 0px -1.5px 0px,
+					 var(--color-blauweSchaduw) 1.5px -1.5px 0px,
+					 var(--color-blauweSchaduw) 1.5px 0px 0px,
+					 var(--color-blauweSchaduw) 1.5px 1.5px 0px,
+					 var(--color-blauweSchaduw) 0px 1.5px 0px,
+					 var(--color-blauweSchaduw) -1.5px 1.5px 0px,
+					 var(--color-blauweSchaduw) -1.5px 0px 0px,
+					 var(--color-blauweSchaduw) 0px 4px 0px,
+					 var(--color-blauweSchaduw) -1.5px 4px 0px,
+					 var(--color-blauweSchaduw) 1.5px 4px 0px,
+					 var(--color-blauweSchaduw) 3px 3px 3px;
+	/* text-shadow: rgb(19, 45, 99) -1.5px -1.5px 0px, 
+					rgb(19, 45, 99) 0px -1.5px 0px, 
+					rgb(19, 45, 99) 1.5px -1.5px 0px, 
+					rgb(19, 45, 99) 1.5px 0px 0px, 
+					rgb(19, 45, 99) 1.5px 1.5px 0px, 
+					rgb(19, 45, 99) 0px 1.5px 0px, 
+					rgb(19, 45, 99) -1.5px 1.5px 0px, 
+					rgb(19, 45, 99) -1.5px 0px 0px, 
+					rgb(19, 45, 99) 0px 4px 0px, 
+					rgb(19, 45, 99) -1.5px 4px 0px, 
+					rgb(19, 45, 99) 1.5px 4px 0px, 
+					rgba(0, 0, 0, 0.5) 3px 3px 3px;
+	tekst schaduw gepakt van de website, zodat hij het zelfde word als de website, de code veranderd tot goeie */
+	text-align: center;
+	}
 
+p{
+	font-family: paragraaf;
+	font-size: 1.2em;
+	color: var(--color-zwart);
+	}
