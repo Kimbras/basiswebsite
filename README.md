@@ -108,13 +108,16 @@ WCAG checklist
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+ 
+  | Choice         | Debora             | Jelle        | Kim               |
+  | ---            | ---                | ---          | ---               |
+  | dit bespreken  | Of de HTML goed is | en ik dit    | github, want die  |  
+  | en dat ook nog |                    | nog een punt | kan ik niet meer  |
+  | ...            | ...                | ...          | pushen en daardoor|
+  | ...            | ...                | ...          | ik errors in code |      
+     
 
-  | Choice         | Debora             | Jelle        | Kim              |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | Of de HTML goed is | en ik dit    | Ik wil vragen over   
-  | en dat ook nog |                    | nog een punt | github, want die kan ik
-                                                        niet meer pushen en daardoor krijg ik errors in mijn visuel code.|
-  | ...            | ...                | ...           ...             
+
 
 
   ### Verslag van meeting
