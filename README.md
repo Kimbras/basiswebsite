@@ -109,11 +109,12 @@ WCAG checklist
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Choice         | Debora             | Jelle        | Kim              |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | dit bespreken  | Of de HTML goed is | en ik dit    | Ik wil vragen over   
+  | en dat ook nog |                    | nog een punt | github, want die kan ik
+                                                        niet meer pushen en daardoor krijg ik errors in mijn visuel code.
+  | ...            | ...                | ...           ...             
 
 
   ### Verslag van meeting
