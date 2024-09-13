@@ -113,7 +113,7 @@ WCAG checklist
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | Of de HTML goed is | en ik dit    | Ik wil vragen over   
   | en dat ook nog |                    | nog een punt | github, want die kan ik
-                                                        niet meer pushen en daardoor krijg ik errors in mijn visuel code.
+                                                        niet meer pushen en daardoor krijg ik errors in mijn visuel code.|
   | ...            | ...                | ...           ...             
 
 
