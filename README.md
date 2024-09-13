@@ -111,11 +111,11 @@ WCAG checklist
  
   | Choice         | Debora             | Jelle        | Kim               |
   | ---            | ---                | ---          | ---               |
-  | dit bespreken  | Of de HTML goed is | en ik dit    | github, want die  |  
-  | en dat ook nog |                    | nog een punt | kan ik niet meer  |
-  | ...            | ...                | ...          | pushen en daardoor|
-  | ...            | ...                | ...          | ik errors in code |      
-     
+  | HTML           |  HTML              | HTML         | HTML              |  
+  |                |                    |              | github error      |
+ 
+   
+
 
 
 
