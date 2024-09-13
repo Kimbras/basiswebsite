@@ -1,39 +1,7 @@
-<<<<<<< HEAD
-=======
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
-
-main {
-	height: 100vh;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
-	overflow-y: scroll;
-  }
-
->>>>>>> ab30e04313706138f05a618fc64d5d37c376cc2c
 /****************/
 /* Section 1 */
 /****************/
 
-<<<<<<< HEAD
 article:nth-of-type(1){
 	display: grid;
 	/* position:relative; */
@@ -67,25 +35,12 @@ section video{
   article:nth-of-type(1) h2{
 	margin-top: -1.5em;
   }
+
+  article:nth-of-type(1) span {
+	display: flex;
+	gap: 1em;
+	}
   
-
-article img:nth-of-type(2),
-article img:nth-of-type(3) {
+  article:nth-of-type(1) span img{
 	height: 5em;
-  }
-=======
-section:nth-of-type(1){
-	display: grid;
-	position:relative;
-	
-}
-
-section:nth-of-type(1) video{
-	object-fit: cover;
-	z-index: 10;
-  }
-
-/* jouw code */
-
-
->>>>>>> ab30e04313706138f05a618fc64d5d37c376cc2c
+	}
