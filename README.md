@@ -120,12 +120,14 @@ WCAG checklist
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+- Taal aanpassen bij de alt tags zodat het engels is.
+- Als de taal wel nederlands is dan moet je een nederlands tag erbij doen
+- Span niet doen
+- De img van App Store en Play Store zijn a tags en niet img tags. 
+- Verder heeft Sanne me geholpen met het gebruiken van grid.
+
 
 </details>
 
