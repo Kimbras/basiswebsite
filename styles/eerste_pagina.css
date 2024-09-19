@@ -2,9 +2,9 @@
 /* Section 1 */
 /****************/
 
-div:nth-of-type(1){
+section:nth-of-type(1) div{
 	display: grid;
-	grid-template-columns:repeat(2, min-content);
+	grid-template-columns:repeat(2, max-content);
 	overflow-y: hidden ;
 	inset: 0;	
 	
@@ -29,31 +29,31 @@ section video{
 	overflow: auto;
   }
 
-  div img:nth-of-type(1) {
+  section:nth-of-type(1) div img:nth-of-type(1) {
 	width:clamp(10em, 40vw, 20em);
 	order:-1;
 	grid-column:1/-1;
 	padding-top: 1em;
   }
 
-  div:nth-of-type(1) h1{
-	margin-top: 6.5em;
+  section:nth-of-type(1) div:nth-of-type(1) h1{
+	margin-top: 7em;
 	grid-column:1/-1;
   }
 
-  div:nth-of-type(1) h2{
+  section:nth-of-type(1) div:nth-of-type(1) h2{
 	margin-top: -1em;
 	grid-column:1/-1;
   }
 
-  div:nth-of-type(1) a:nth-of-type(1) img{
+  section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 	display: block;
 	width: 10em;
 	margin: 0 1em 10em;
 
 	}
 
-  div:nth-of-type(1) a:nth-of-type(2) img {
+	section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 	display: block;
 	width: 10em;
 	margin: 0 1em 10em;
@@ -75,6 +75,7 @@ section:nth-of-type(2) {
 		"omschrijving"
 		"plaatjes";
 	align-items: center;
+	gap:1em;
 }
 
 
@@ -82,6 +83,7 @@ section:nth-of-type(2) h2{
 	grid-area:titel;
 	/* grid-row-start: 2; */
 	align-self: end;
+	margin-top: 5em;
   }
 
 section:nth-of-type(2) p{
@@ -117,6 +119,253 @@ section:nth-of-type(2) img{
 
   @media (width > 60em){
 	section:nth-of-type(2) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+	}
+  }
+
+/****************/
+/* Section 3 */
+/****************/
+ 
+/* telefoon */
+section:nth-of-type(3) {
+	display: grid;
+	grid-template-rows:max-content 100vw;
+	grid-template-areas: 
+		"card"
+		"plaatjes";
+	place-items: center;
+	gap: 3em;
+}
+
+section:nth-of-type(3) div {
+	grid-area: card;
+}
+
+section:nth-of-type(3) img {
+	grid-area: plaatjes;
+}
+/* alles van de div */
+
+section:nth-of-type(3) div:nth-of-type(1) h2{
+	padding-top: 4em;
+}
+
+section:nth-of-type(3) div:nth-of-type(1) p{
+	padding-left: 15%;
+	padding-right: 15%;
+	margin-bottom: 0;
+}
+
+
+/* man en varken */
+section:nth-of-type(3) img:nth-of-type(1) {
+	width:50%;
+	z-index: 1;
+	translate: -30% 30%;
+}
+
+/* boom */
+section:nth-of-type(3) img:nth-of-type(2) {
+	width:40%;
+	z-index: -4;
+	translate:-110% 0%;
+}
+
+/* landschap */
+section:nth-of-type(3) img:nth-of-type(3) {
+	width:80%;
+	border: solid var(--color-wit) 0.5em;
+	box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
+	translate:0% -30%;
+}
+
+/* bij */
+section:nth-of-type(3) img:nth-of-type(4) {
+	width: 15%;
+	translate:200% 170%;
+}
+
+
+
+/* middel formaat */
+@media (width > 45em ) {
+	section:nth-of-type(3) div {
+		background-image: url("../images/stickienotes.webp");
+		background-size: cover;
+		width:75%;
+		translate: -30 0;
+		aspect-ratio: 1/1;
+		gap: 3em;
+	}
+
+	section:nth-of-type(3) div:nth-of-type(1) h2{
+		padding-top: 5em;
+	}
+	
+	section:nth-of-type(3) div:nth-of-type(1) p{
+		padding-left: 30%;
+		padding-right: 15%;
+		margin-bottom: 0;
+	}
+
+	/* man */
+	section:nth-of-type(3) img:nth-of-type(1) {
+		width:45%;
+		z-index: 1;
+		translate: -40% -90%;
+	}
+
+	/* boom */
+	section:nth-of-type(3) img:nth-of-type(2) {
+		width:45%;
+		translate:-105% -80%;
+	}
+
+	/* landschap */
+	section:nth-of-type(3) img:nth-of-type(3) {
+		width:50%;
+		border: solid var(--color-wit) 0.5em;
+		box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
+		translate:60% -150%;
+		rotate: 8deg;
+		z-index: -1;
+	}
+
+	/* bij */
+	section:nth-of-type(3) img:nth-of-type(4) {
+		width: 15%;
+		translate: 100% 0;
+	}
+}
+
+/* grootste formaat */
+@media (width > 60em ) {
+	section:nth-of-type(3) div {
+		background-image: url("../images/stickienotes.webp");
+		background-size: cover;
+		width:55%;
+		aspect-ratio: 1/1;
+		gap: 3em;
+	}
+
+	section:nth-of-type(3) div:nth-of-type(1) h2{
+		font-size: 3em;
+		translate: 10% -20%;
+	}
+
+	section:nth-of-type(3) div:nth-of-type(1) p{
+		translate: 5% -30%;
+	}
+
+		/* man */
+		section:nth-of-type(3) img:nth-of-type(1) {
+			width:25%;
+			z-index: 1;
+			translate: -100% -250%;
+		}
+	
+		/* boom */
+		section:nth-of-type(3) img:nth-of-type(2) {
+			width:28%;
+			translate:-140% -150%;
+		}
+	
+		/* landschap */
+		section:nth-of-type(3) img:nth-of-type(3) {
+			width:30%;
+			border: solid var(--color-wit) 0.5em;
+			box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
+			translate:110% -390%;
+			z-index: -1;
+			rotate: 0deg;
+		}
+	
+		/* bij */
+		section:nth-of-type(3) img:nth-of-type(4) {
+			width: 8%;
+			translate: 450% -650%;
+		}
+}
+
+
+
+
+
+
+
+
+
+/****************/
+/* Section 4 */
+/****************/
+
+
+section:nth-of-type(4) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content;
+	grid-template-areas: 
+		"titel"
+		"omschrijving"
+		"plaatjes";
+	align-items: center;
+	gap:1em;
+}
+
+section:nth-of-type(4) h2{
+	grid-area:titel;
+	align-self: end;
+	margin-top: 5em;
+  }
+
+section:nth-of-type(4) p{
+	grid-area:omschrijving;
+	align-self: start;
+	padding-left: 20%;  /*andere manier vinden */
+	padding-right: 20%; /*andere manier vinden */
+
+  }
+
+section:nth-of-type(4) img{
+	grid-area:plaatjes;
+	place-self: center;
+  }
+
+  /* bij */
+  section:nth-of-type(4) img:nth-of-type(1) {
+	width:1%;
+  }
+
+  /* Landschap */
+  section:nth-of-type(4) img:nth-of-type(2) {
+	width:10%;
+	border: solid var(--color-wit) 0.5em;
+	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
+		
+  }
+
+  /* schaap*/
+  section:nth-of-type(4) img:nth-of-type(3) {
+	width:-1%;	
+  }
+
+/* Schaap oog 1 */
+section:nth-of-type(4) img:nth-of-type(4) {
+	width:-1%;	
+	}
+ 
+/* Schaap oog 2 */
+section:nth-of-type(4) img:nth-of-type(5) {
+	width:-1%;	
+  }
+
+  @media (width > 60em){
+	section:nth-of-type(4) {
 		grid-template-rows:2fr 4fr;
 		grid-template-columns:28em 1fr;
 		gap:0 1em;

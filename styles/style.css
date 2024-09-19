@@ -13,7 +13,8 @@
 	/* startje */
 	--color-zwart:#000000;
 	--color-donkerbruin:#38322c;
-	--color-wit:#eee;
+	--color-beige:#eee;
+	--color-wit:#fff;
 	--color-blauweSchaduw:rgb(19, 45, 99);
 	--color-achtergrond-light:rgb(251,244,232,255)
 }
@@ -48,8 +49,8 @@ main {
 	height: 100vh;
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
-	overflow-y: scroll;
-	overflow-x: hidden ;
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden ; */
   }
 
 
@@ -66,8 +67,8 @@ body{
 
 h1{
 font-family: kopjes;
-	font-size:clamp(2em, 2vw, 10em);
-	color: var(--color-wit);
+	font-size:clamp(2em, 4vw, 10em);
+	color: var(--color-beige);
 	text-decoration-style: solid;
 	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
 				 var(--color-blauweSchaduw) 0px -1.5px 0px,
@@ -99,8 +100,9 @@ font-family: kopjes;
 
 h2{
 	font-family: kopjes;
-	font-size:clamp(2.5em, 3vw, 10em);
-	color: var(--color-wit);
+	/* font-size:clamp(2em, 3vw, 10em); */
+	font-size: 2em;
+	color: var(--color-beige);
 	text-decoration-style: solid;
 	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
 					 var(--color-blauweSchaduw) 0px -1.5px 0px,
@@ -133,6 +135,16 @@ h2{
 
 p{
 	font-family: paragraaf;
-	font-size:clamp(1.2em, 1vw, 1.5em);
+	/* font-size:clamp(0.8em, 2.5vw, 2em); */
+	font-size: 1.2em;
 	color: var(--color-donkerbruin);
+	}
+
+	img {
+		max-width:100%;
+	}
+
+
+	footer {
+		display:none;
 	}
