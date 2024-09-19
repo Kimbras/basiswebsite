@@ -2,9 +2,9 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box; 
 }
-
+ 
 
 /*********************/
 /* Kleuren */
@@ -12,8 +12,10 @@
 :root {
 	/* startje */
 	--color-zwart:#000000;
+	--color-donkerbruin:#38322c;
 	--color-wit:#eee;
 	--color-blauweSchaduw:rgb(19, 45, 99);
+	--color-achtergrond-light:rgb(251,244,232,255)
 }
 
 /*********************/
@@ -58,11 +60,13 @@ main {
 body{
 	margin: 0;
 	padding: 0;
+	background-color: var(--color-achtergrond-light);
 }
+
 
 h1{
 font-family: kopjes;
-	font-size: 4em;
+	font-size:clamp(3em, 3vw, 10em);
 	color: var(--color-wit);
 	text-decoration-style: solid;
 	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
@@ -95,10 +99,10 @@ font-family: kopjes;
 
 h2{
 	font-family: kopjes;
-		font-size: 3em;
-		color: var(--color-wit);
-		text-decoration-style: solid;
-		text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
+	font-size:clamp(2.5em, 3vw, 10em);
+	color: var(--color-wit);
+	text-decoration-style: solid;
+	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
 					 var(--color-blauweSchaduw) 0px -1.5px 0px,
 					 var(--color-blauweSchaduw) 1.5px -1.5px 0px,
 					 var(--color-blauweSchaduw) 1.5px 0px 0px,
@@ -124,10 +128,11 @@ h2{
 					rgba(0, 0, 0, 0.5) 3px 3px 3px;
 	tekst schaduw gepakt van de website, zodat hij het zelfde word als de website, de code veranderd tot goeie */
 	text-align: center;
+	margin: 0;
 	}
 
 p{
 	font-family: paragraaf;
-	font-size: 1.2em;
-	color: var(--color-zwart);
+	font-size:clamp(1.2em, 1vw, 1.5em);
+	color: var(--color-donkerbruin);
 	}

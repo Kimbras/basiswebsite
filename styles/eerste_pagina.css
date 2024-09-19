@@ -2,12 +2,18 @@
 /* Section 1 */
 /****************/
 
-article:nth-of-type(1){
+div:nth-of-type(1){
 	display: grid;
-	/* position:relative; */
+	grid-template-columns:repeat(2, min-content);
 	overflow-y: hidden ;
 	inset: 0;	
+	
+	justify-content: center; /* Center the links horizontally ChatGPT*/
+	align-items: center; /* Center the links vertically ChatGPT*/
 	place-items: center; /* Zent zowel horizontaal als verticaal chatGPT */
+}
+section:nth-of-type(1) {
+	position: relative;
 }
 
 section video{
@@ -19,28 +25,102 @@ section video{
 	max-height: 100vh;
 	z-index:-1;
 	object-fit: cover;
-	height:100vh;
+	height:1000vh;
 	overflow: auto;
   }
 
-  article img:nth-of-type(1) {
-	height: 20em;
+  div img:nth-of-type(1) {
+	width:clamp(10em, 40vw, 20em);
 	order:-1;
+	grid-column:1/-1;
+	padding-top: 1em;
   }
 
-  article:nth-of-type(1) h1{
-	margin-top: 4.6em;
+  div:nth-of-type(1) h1{
+	margin-top: 6.5em;
+	grid-column:1/-1;
   }
 
-  article:nth-of-type(1) h2{
-	margin-top: -1.5em;
+  div:nth-of-type(1) h2{
+	margin-top: -1em;
+	grid-column:1/-1;
   }
 
-  article:nth-of-type(1) span {
-	display: flex;
-	gap: 1em;
+  div:nth-of-type(1) a:nth-of-type(1) img{
+	display: block;
+	width: 10em;
+	margin: 0 1em 10em;
+
 	}
-  
-  article:nth-of-type(1) span img{
-	height: 5em;
+
+  div:nth-of-type(1) a:nth-of-type(2) img {
+	display: block;
+	width: 10em;
+	margin: 0 1em 10em;
 	}
+
+
+
+
+/****************/
+/* Section 2 */
+/****************/
+
+
+section:nth-of-type(2) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content;
+	grid-template-areas: 
+		"titel"
+		"omschrijving"
+		"plaatjes";
+	align-items: center;
+}
+
+
+section:nth-of-type(2) h2{
+	grid-area:titel;
+	/* grid-row-start: 2; */
+	align-self: end;
+  }
+
+section:nth-of-type(2) p{
+	grid-area:omschrijving;
+	align-self: start;
+	place-self: center;
+	
+  }
+
+section:nth-of-type(2) img{
+	grid-area:plaatjes;
+	place-self: center;
+  }
+
+  /* Tractor */
+  section:nth-of-type(2) img:nth-of-type(1) {
+	width:100%;
+  }
+
+  /* Kat */
+  section:nth-of-type(2) img:nth-of-type(2) {
+	width:16.7%;
+	translate:25% -240%;	
+  }
+
+  /* Hond */
+  section:nth-of-type(2) img:nth-of-type(3) {
+	width:16.7%;
+	/* place-self:end start; */
+	translate:-230% 125%;	
+  }
+
+  @media (width > 60em){
+	section:nth-of-type(2) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+	}
+  }

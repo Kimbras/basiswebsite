@@ -113,7 +113,6 @@ WCAG checklist
   | ---            | ---                | ---          | ---               |
   | HTML           |  HTML              | HTML         | HTML              |  
   |                |                    |              | github error      |
- 
    
 
 
