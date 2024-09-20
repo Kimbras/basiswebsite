@@ -16,7 +16,8 @@
 	--color-beige:#eee;
 	--color-wit:#fff;
 	--color-blauweSchaduw:rgb(19, 45, 99);
-	--color-achtergrond-light:rgb(251,244,232,255)
+	--color-achtergrond-light:rgb(251,244,232,255);
+	--color-lichtblauwSchaduw:#87ceec;
 }
 
 /*********************/
@@ -71,17 +72,17 @@ font-family: kopjes;
 	color: var(--color-beige);
 	text-decoration-style: solid;
 	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
-				 var(--color-blauweSchaduw) 0px -1.5px 0px,
-				 var(--color-blauweSchaduw) 1.5px -1.5px 0px,
-				 var(--color-blauweSchaduw) 1.5px 0px 0px,
-				 var(--color-blauweSchaduw) 1.5px 1.5px 0px,
-				 var(--color-blauweSchaduw) 0px 1.5px 0px,
-				 var(--color-blauweSchaduw) -1.5px 1.5px 0px,
-				 var(--color-blauweSchaduw) -1.5px 0px 0px,
-				 var(--color-blauweSchaduw) 0px 4px 0px,
-				 var(--color-blauweSchaduw) -1.5px 4px 0px,
-				 var(--color-blauweSchaduw) 1.5px 4px 0px,
-				 var(--color-blauweSchaduw) 3px 3px 3px;
+					 var(--color-blauweSchaduw) 0px -1.5px 0px,
+					 var(--color-blauweSchaduw) 1.5px -1.5px 0px,
+					 var(--color-blauweSchaduw) 1.5px 0px 0px,
+					 var(--color-blauweSchaduw) 1.5px 1.5px 0px,
+					 var(--color-blauweSchaduw) 0px 1.5px 0px,
+					 var(--color-blauweSchaduw) -1.5px 1.5px 0px,
+					 var(--color-blauweSchaduw) -1.5px 0px 0px,
+					 var(--color-blauweSchaduw) 0px 4px 0px,
+					 var(--color-blauweSchaduw) -1.5px 4px 0px,
+					 var(--color-blauweSchaduw) 1.5px 4px 0px,
+					 var(--color-blauweSchaduw) 3px 3px 3px;
 	/* text-shadow: rgb(19, 45, 99) -1.5px -1.5px 0px, 
 					rgb(19, 45, 99) 0px -1.5px 0px, 
 					rgb(19, 45, 99) 1.5px -1.5px 0px, 
@@ -132,6 +133,21 @@ h2{
 	text-align: center;
 	margin: 0;
 	}
+
+h3{
+	font-family: bodySchrift;
+	/* font-size:clamp(2em, 3vw, 10em); */
+	font-size: 2em;
+	color: var(--color-beige);
+	text-decoration-style: solid;
+	text-shadow: var(--color-lichtblauwSchaduw) -1px -1px 0px,
+				var(--color-lichtblauwSchaduw) 0px -1px 0px,
+				var(--color-lichtblauwSchaduw) 0.5px 0px 0px,
+				var(--color-lichtblauwSchaduw) 0px 1px 0px,
+				var(--color-lichtblauwSchaduw) 1.5px 1.5px 0px,
+				var(--color-blauweSchaduw) 1.5px 1.5px 0px;
+	
+}
 
 p{
 	font-family: paragraaf;

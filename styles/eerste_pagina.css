@@ -135,7 +135,7 @@ section:nth-of-type(2) img{
 /* telefoon */
 section:nth-of-type(3) {
 	display: grid;
-	grid-template-rows:max-content 100vw;
+	grid-template-rows:max-content max-content max-content;
 	grid-template-areas: 
 		"card"
 		"plaatjes";
@@ -181,7 +181,6 @@ section:nth-of-type(3) img:nth-of-type(3) {
 	width:80%;
 	border: solid var(--color-wit) 0.5em;
 	box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
-	translate:0% -30%;
 }
 
 /* bij */
@@ -311,7 +310,6 @@ section:nth-of-type(4) {
 		"omschrijving"
 		"plaatjes";
 	align-items: center;
-	gap:1em;
 }
 
 section:nth-of-type(4) h2{
@@ -454,4 +452,179 @@ section:nth-of-type(5) img:nth-of-type(1) {
 		box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
 			
 	  }
+  }
+
+
+
+
+
+
+/****************/
+/* Section 6 */
+/****************/
+
+
+section:nth-of-type(6) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content;
+	grid-template-areas: 
+		"titel"
+		"omschrijving"
+		"plaatjes";
+	place-items: center;
+	padding-bottom: 7em;
+}
+
+section:nth-of-type(6) h2{
+	grid-area:titel;
+	margin-top:2em;
+  }
+
+section:nth-of-type(6) p{
+	grid-area:omschrijving;
+	padding-left: 20%;  /*andere manier vinden */
+	padding-right: 20%; /*andere manier vinden */
+  }
+
+section:nth-of-type(6) article{
+	position: relative;
+	grid-area:plaatjes;
+	place-items: center;
+  }
+
+section:nth-of-type(6) article img {
+	position: relative;
+	align-items: center;
+	order: -2;
+}
+
+section:nth-of-type(6) article h3{
+	position: absolute;
+  }
+
+  /* valley */
+  section:nth-of-type(6) article:nth-of-type(1) img {
+	width:60%;
+	border: solid var(--color-wit) 0.5em;
+	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
+	translate: 0% 0%;
+  } 
+
+
+  /* fishing */
+  section:nth-of-type(6) article:nth-of-type(2) img {
+	width:60%;
+	border: solid var(--color-wit) 0.5em;
+	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;	
+	translate: 0% 100%;
+  }
+
+
+  /* town*/
+  section:nth-of-type(6) article:nth-of-type(3) img {
+	width:60%;
+	border: solid var(--color-wit) 0.5em;
+	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
+	translate: 0% 200%;
+  }
+
+  /* vis*/
+  section:nth-of-type(6) img:nth-of-type(4) {
+	width:30%;
+	translate: 200% 200%;
+  }
+
+
+  @media (width > 60em){
+	section:nth-of-type(6) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+	}
+  }
+
+
+
+
+
+
+
+  
+/****************/
+/* Section 7 */
+/****************/
+
+
+section:nth-of-type(7) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content;
+	grid-template-areas: 
+		"logo"
+		"titel"
+		"omschrijving";
+	place-items: center;
+	background-image: url("../images/kitchen_pattern-tablet.jpg");
+	background: repeat 10;
+}
+
+section:nth-of-type(7) h2{
+	grid-area:titel;
+  }
+
+section:nth-of-type(7) p{
+	grid-area:omschrijving;
+	padding-left: 20%;  /*andere manier vinden */
+	padding-right: 20%; /*andere manier vinden */
+  }
+
+  /* logo */
+  section:nth-of-type(7) img {
+	grid-area:logo;
+	width:40%;
+  } 
+
+/* kreeft */
+	section:nth-of-type(7) img:nth-of-type(2){
+		grid-area:omschrijving;
+		display: none;
+	  } 
+
+/* taart */
+section:nth-of-type(7) img:nth-of-type(3){
+	grid-area:omschrijving;
+	display: none;
+  } 
+
+/* plank */
+section:nth-of-type(7) img:nth-of-type(4){
+	grid-area:omschrijving;
+	width: 100%;
+	translate: 0% 210%;
+  } 
+ 
+  @media (width > 60em){
+	section:nth-of-type(6) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+	}
+
+	/* kreeft */
+	section:nth-of-type(7) img:nth-of-type(2){
+		grid-area:omschrijving;
+		width:10%;
+		display: block;
+	  } 
+
+	/* taart */
+	section:nth-of-type(7) img:nth-of-type(3){
+	grid-area:omschrijving;
+	display: none;
+  } 
   }
