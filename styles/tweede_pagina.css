@@ -1,31 +1,532 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-achtergrondPagina2);
+}
+
+/*********************/
+/* Section 1 */
+/*********************/
+main section:nth-of-type(1) {
+	display: grid;
+	grid-template-areas:
+		"logo"
+		"titel"
+		"video";
+	background: var(--gradient-tweedePagina);
+	place-items: center;
+}
+
+main section:nth-of-type(1) img:nth-of-type(1){
+	grid-area:logo;
+	width: 40%;
+	place-self: start center;
+	padding-top: 2em;
+	z-index: 1;
+  }
+
+main section:nth-of-type(1) img:nth-of-type(2){
+	grid-area:logo;
+	width: 45%;
+	translate: 0% 110%;
+	z-index: 1;
+  }
+
+
+  main section:nth-of-type(1) h1 {
+	grid-area:titel;
+	translate: 0% 20%;
+	z-index: 10;
+  } 
+
+/* video */
+main section:nth-of-type(1) iframe{
+		grid-area:video;
+		border: solid var(--color-wit) 0.5em;
+		align-items: center;
+		z-index: 1;
+		}
+	
+
+/* boom links */
+main section:nth-of-type(1) img:nth-of-type(3){
+	grid-area:video;
+	width: 90%;
+	place-self: start;
+	translate: -50% -10%;
+	
+  } 
+
+/* boom rechts */
+main section:nth-of-type(1) img:nth-of-type(4){
+	grid-area:video;
+	width: 80%;
+	place-self: start;
+	translate: 70% -5%;
+  } 
+
+/* nijlpaard */
+main section:nth-of-type(1) img:nth-of-type(5){
+	grid-area:video;
+	width: 40%;
+	place-self: start end;
+	translate: 0% 150%;
+	z-index: 1;
+
+  } 
+ 
+/* olifant */
+main section:nth-of-type(1) img:nth-of-type(6){
+	grid-area:video;
+	width: 50%;
+	transform: scaleX(-1);
+	translate: -50% 45%;
+	z-index: 1;
+	
+
+  } 
+
+/*********************/
+/* Section 2 */
+/*********************/
+
+section:nth-of-type(2) {
+	display: grid;
+	grid-template-areas:
+		"titel"
+		"omschrijving"
+		"slideshow";
+	place-items: center;
+}
+section:nth-of-type(2) h2{
+	grid-area: titel;
+}
+
+section:nth-of-type(2) p{
+	grid-area: omschrijving;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.slideShow{
+	grid-area: slideshow;
+	width: 90%;
+}
+
+section:nth-of-type(2) button{
+	grid-area: slideshow;
+	background: var(--gradient-groen);
+	border: 0.1em solid var(--color-wit);
+	border-bottom: 1px solid var(--color-blauweSchaduw);
+	border-radius: 10px;
+	border-right: 1px solid var(--color-blauweSchaduw);
+	box-shadow: inset 0 0 1px 0 var(--color-blauweSchaduw), 0 3px 1px -3px var(--color-blauweSchaduw);
+	color: var(--color-wit);
+	font-family: kopjes;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: .2px;
+	padding: 8px 15px 6px;
+	text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					0 -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px 0 0 var(--color-blauweSchaduw), 
+					1.2px 1.2px 0 var(--color-blauweSchaduw), 
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 0 0 var(--color-blauweSchaduw),
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					1.2px 1.2px 0 var(--color-blauweSchaduw);
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+section:nth-of-type(2) button:hover {
+transform: scale(1.2);
+cursor: pointer;
+background: var(--gradient-hover-groen);
+
+}
+/* button links */
+section:nth-of-type(2) button:nth-of-type(1){
+	place-self: end center;
+	translate: -80% -200%;
+}
+
+/* button rechts */
+section:nth-of-type(2) button:nth-of-type(2){
+	place-self: end center;
+	translate: 80% -200%;
+}
+
+/* boom links */
+section:nth-of-type(2) img:nth-of-type(5){
+	grid-area: slideshow;
+	width: 80%;
+	rotate: 12deg;
+	translate: -80% 30%;
+}
+
+/* boom rechts */
+section:nth-of-type(2) img:nth-of-type(6){
+	grid-area: slideshow;
+	width: 80%;
+	rotate: -12deg;
+	translate: 80% 50%;
+}
+
+
+
+
+@media (width > 35em){
+/* button links */
+section:nth-of-type(2) button:nth-of-type(1){
+	translate: -80% -300%;
+}
+
+/* button rechts */
+section:nth-of-type(2) button:nth-of-type(2){
+	translate: 80% -300%;
+}
+}
+
+@media (width > 45em){
+	/* button links */
+	section:nth-of-type(2) button:nth-of-type(1){
+		translate: -80% -400%;
+	}
+	
+	/* button rechts */
+	section:nth-of-type(2) button:nth-of-type(2){
+		translate: 80% -400%;
+	}
+			}
+@media (width > 60em){
+	/* button links */
+	section:nth-of-type(2) button:nth-of-type(1){
+		translate: -80% -600%;
+	}
+				
+	/* button rechts */
+	section:nth-of-type(2) button:nth-of-type(2){
+		translate: 80% -600%;
+	}
 }
 
 
 
 
 
+/*********************/
+/* Section 3 */
+/*********************/
+section:nth-of-type(3) {
+	display: grid;
+	gap:2em;
+}
+
+
+section:nth-of-type(3) p:nth-of-type(1){
+	margin: 0;
+}
+
+section:nth-of-type(3) ul{
+	display: grid;
+	list-style: none;
+	grid-template-columns:1fr 1fr;
+	gap: 1em;
+}
+
+section:nth-of-type(3) li{
+	display: grid;
+	list-style: none;
+	/* padding: 45px 0 25px;
+	position: relative; */
+}
+
+/* fotos goeie grote en aanspreken */
+section:nth-of-type(3) img:nth-of-type(1){
+	width:100%;
+	height:auto;
+	align-self:stretch;
+	object-fit:cover;
+	display:block;
+  }
+
+  section:nth-of-type(3) img:nth-of-type(2){
+	  width:80%;
+	  /* height: 100% !important; */
+	}
+
+
+section:nth-of-type(3) img:nth-of-type(3){
+	width:100%;
+	height:auto;
+	align-self:stretch;
+	object-fit:cover;
+	display:block;
+  }
+
+section:nth-of-type(3) img:nth-of-type(4){
+	width:100%;
+	height:auto;
+	align-self:stretch;
+	object-fit:cover;
+	display:block;
+  }
+
+/* blok1 afbeelding */
+section:nth-of-type(3)li img {
+	grid-row: 1;
+	align-self:stretch;
+	object-fit:cover;
+	width:100%;
+	height:auto;
+  }
+  
+section:nth-of-type(3) li h5 {
+	grid-row: 2;
+	background-color: var(--color-wit);
+	padding: 1em;
+	place-self: end center;
+  }
+
+  /*  p */
+section:nth-of-type(3) li p {
+	grid-row: 3;
+	background-color: var(--color-wit);
+	padding: 1.5em;
+	place-self: end center;
+  }
+
 
 /*********************/
-/* CUSTOM PROPERTIES */
+/* Section 4 */
 /*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+section:nth-of-type(4){
+	display: grid;
+
+}
+
+section:nth-of-type(4)  article:nth-of-type(1){
+	display: grid;
+	grid-template-columns:min(100%, 30em);
+	place-items: center;
+}
+
+section:nth-of-type(4) article:nth-of-type(1) img:nth-of-type(1){
+	grid-row: 1;
+	grid-column: 1 / -1;
+  }
+
+  section:nth-of-type(4) h2 {
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+  }
+
+
+
+section:nth-of-type(4) article:nth-of-type(1) h5 {
+	background-color: var(--color-wit);
+	padding: 1em;
+	place-self: end center;
+	grid-row: 2;
+	grid-column: 2 / -2;
+  }
+
+  /*  p */
+section:nth-of-type(4) article:nth-of-type(1) p {
+	background-color: var(--color-wit);
+	padding: 1.5em;
+	margin: 0;
+	place-self: end center;
+	grid-row: 3;
+	grid-column: 2 / -2;
+
+  }
+
+section:nth-of-type(4) article:nth-of-type(1) button{
+	border: none;
+	font-family: paragraaf;
+	font-size: 1.5em;
+	color: var(--color-donkerbruin);
+	text-transform: uppercase;
+	font-weight:500;
+	line-height: 139%;
+	padding: 0;
+	margin: 0;
+	background-color: var(--color-wit);
+	grid-row: 4;
+	grid-column: 4 / -4;
+	transition: transform 0.5s ease;
+}
+
+section:nth-of-type(4) button:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+	background: var(--color-donkerbruin);
+  }
+
+/* section:nth-of-type(4) img:nth-of-type(1){
+	width: 40%;
+	translate: 150% -30%;
+}  */
+
+section:nth-of-type(4) img:nth-of-type(2){
+	display: grid;
+	width: 100%;
+}
+
+
+/*********************/
+/* Section 5 */
+/*********************/
+
+section:nth-of-type(5){
+	display: grid;
+	grid-template-columns:min(100%, 40em);
+	justify-content: center;
+    align-content: center;
+	place-items: center;
+	background-image: url("../images/pagina2/achtergrond_wolken.jpg");
+	background-size: cover;
+	grid-column: 1 / -1;
+}
+
+
+section:nth-of-type(5) h5{
+	margin-top: 2em;
+}
+
+section:nth-of-type(5) button{
+	background-color: var(--color-donkerbruin);
+    color: var(--color-wit);
+    font-family: paragraaf;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 270px;
+    padding: 20px 25px;
+	border-radius: 60px;
+    width: 100%;
+	transition: transform 0.5s ease;
+ } 
+
+section:nth-of-type(5) button:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+	background: var(--gradient-hover-oranje);
+}
+
+section:nth-of-type(5) img{
+	width: 20%;
+}
+
+strong{
+	font-weight: bolder;
+	color: var(--color-oranjeStrong);
 }
 
 
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/*********************/
+/* Section 6 */
+/*********************/
 
-/* jouw code */
+/* telefoon */
+section:nth-of-type(6) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content;
+	grid-template-areas: 
+		"titel"
+		"omschrijving"
+		"buttons"
+		"afbeeldingen";
+	place-items: center;
+}
 
+section:nth-of-type(6) h2{
+	margin-top: 4em;
+	grid-area: titel;
+}
+
+section:nth-of-type(6) p{
+	grid-area: omschrijving;
+}
+
+section:nth-of-type(6) button:nth-of-type(1){
+	translate: 90% 0%;
+}
+
+section:nth-of-type(6) button:nth-of-type(2){
+	translate: -90% 0%;
+}
+
+section:nth-of-type(6) button{
+	margin-top: 1em;
+	grid-area: buttons;
+	
+	background: var(--gradient-groen);
+	border: 1px var(--color-wit);
+    border-bottom: 1px solid var(--color-blauweSchaduw);
+    border-radius: 60px;
+    border-right: 1px solid var(--color-donkerbruin);
+    text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
+						0 -1.2px 0 var(--color-blauweSchaduw), 
+						1.2px -1.2px 0 var(--color-blauweSchaduw), 
+						1.2px 0 0 var(--color-blauweSchaduw), 
+						1.2px 1.2px 0 var(--color-blauweSchaduw), 
+						0 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 0 0 var(--color-blauweSchaduw),
+						0 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 1.2px 0 var(--color-blauweSchaduw),
+						1.2px 1.2px 0 var(--color-blauweSchaduw);
+    color: var(--color-wit);
+    font-family: kopjes;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    padding: 8px 30px 6px;
+    text-shadow: 	-1.2px -1.2px 0 var(--color-blauweSchaduw),
+					0 -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px 0 0 var(--color-blauweSchaduw), 
+					1.2px 1.2px 0 var(--color-blauweSchaduw),
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 0 0 var(--color-blauweSchaduw),
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					1.2px 1.2px 0 var(--color-blauweSchaduw);
+    text-transform: uppercase;
+	cursor: pointer;
+	transition: transform 0.5s ease;
+}
+section:nth-of-type(6) button:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+	background: var(--gradient-hover-groen);
+  }
+
+section:nth-of-type(6) img:nth-of-type(1){
+	grid-area: titel;
+	width: 30%;
+	translate: -110% -15%;
+	order:1;
+}
+
+section:nth-of-type(6) img:nth-of-type(2){
+	grid-area: afbeeldingen;
+	width: 30%;
+	translate: 120% -20%;
+}
+
+section:nth-of-type(6) img:nth-of-type(3){
+	grid-area: afbeeldingen;
+	width: 40%;
+	place-self: end start;
+}

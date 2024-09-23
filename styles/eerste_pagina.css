@@ -1,22 +1,28 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-achtergrond-light);
+}
+
+
 /****************/
 /* Section 1 */
 /****************/
 
-section:nth-of-type(1) div{
+main section:nth-of-type(1) div:nth-of-type(1){
 	display: grid;
 	grid-template-columns:repeat(2, max-content);
 	overflow-y: hidden ;
 	inset: 0;	
-	
 	justify-content: center; /* Center the links horizontally ChatGPT*/
 	align-items: center; /* Center the links vertically ChatGPT*/
 	place-items: center; /* Zent zowel horizontaal als verticaal chatGPT */
 }
-section:nth-of-type(1) {
+main section:nth-of-type(1) {
 	position: relative;
 }
 
-section video{
+main section:nth-of-type(1) video{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -29,24 +35,24 @@ section video{
 	overflow: auto;
   }
 
-  section:nth-of-type(1) div img:nth-of-type(1) {
+ main  section:nth-of-type(1) div:nth-of-type(1) img:nth-of-type(1) {
 	width:clamp(10em, 40vw, 20em);
 	order:-1;
 	grid-column:1/-1;
 	padding-top: 1em;
   }
 
-  section:nth-of-type(1) div:nth-of-type(1) h1{
+  main section:nth-of-type(1) div:nth-of-type(1) h1{
 	margin-top: 7em;
 	grid-column:1/-1;
   }
 
-  section:nth-of-type(1) div:nth-of-type(1) h2{
+  main section:nth-of-type(1) div:nth-of-type(1) h2{
 	margin-top: -1em;
 	grid-column:1/-1;
   }
 
-  section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
+  main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 	display: block;
 	width: 10em;
 	margin: 0 1em 10em;
@@ -67,7 +73,7 @@ section video{
 /****************/
 
 
-section:nth-of-type(2) {
+section:nth-of-type(2){
 	display: grid;
 	grid-template-rows:max-content max-content max-content;
 	grid-template-areas: 
@@ -193,6 +199,12 @@ section:nth-of-type(3) img:nth-of-type(4) {
 
 /* middel formaat */
 @media (width > 45em ) {
+
+	section:nth-of-type(3) {
+		grid-template-areas:none;
+		padding-bottom: 10em;
+	}
+
 	section:nth-of-type(3) div {
 		background-image: url("../images/stickienotes.webp");
 		background-size: cover;
@@ -215,13 +227,12 @@ section:nth-of-type(3) img:nth-of-type(4) {
 	section:nth-of-type(3) img:nth-of-type(1) {
 		width:45%;
 		z-index: 1;
-		translate: -40% -90%;
+		translate: -60% 50%;
 	}
 
 	/* boom */
 	section:nth-of-type(3) img:nth-of-type(2) {
 		width:45%;
-		translate:-105% -80%;
 	}
 
 	/* landschap */
@@ -229,7 +240,7 @@ section:nth-of-type(3) img:nth-of-type(4) {
 		width:50%;
 		border: solid var(--color-wit) 0.5em;
 		box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
-		translate:60% -150%;
+		translate: 100% 90%;
 		rotate: 8deg;
 		z-index: -1;
 	}
@@ -237,12 +248,13 @@ section:nth-of-type(3) img:nth-of-type(4) {
 	/* bij */
 	section:nth-of-type(3) img:nth-of-type(4) {
 		width: 15%;
-		translate: 150% -80%;
+		translate: 240% 300%;
 	}
 }
 
 /* grootste formaat */
-@media (width > 60em ) {
+@media (width > 60em ) {	
+
 	section:nth-of-type(3) div {
 		background-image: url("../images/stickienotes.webp");
 		background-size: cover;
@@ -252,24 +264,23 @@ section:nth-of-type(3) img:nth-of-type(4) {
 
 	section:nth-of-type(3) div:nth-of-type(1) h2{
 		font-size: 3em;
-		translate: 10% -20%;
+		translate: 10% -40%;
 	}
 
 	section:nth-of-type(3) div:nth-of-type(1) p{
-		translate: 5% -30%;
+		translate: 5% -70%;
 	}
 
 		/* man */
 		section:nth-of-type(3) img:nth-of-type(1) {
 			width:25%;
 			z-index: 1;
-			translate: -100% -250%;
+			translate: -80% 60%; 
 		}
 	
 		/* boom */
 		section:nth-of-type(3) img:nth-of-type(2) {
 			width:28%;
-			translate:-140% -150%;
 		}
 	
 		/* landschap */
@@ -277,7 +288,7 @@ section:nth-of-type(3) img:nth-of-type(4) {
 			width:30%;
 			border: solid var(--color-wit) 0.5em;
 			box-shadow: var(--color-blauweSchaduw) -3px 1.5px 10px;
-			translate:110% -390%;
+			translate:110% 5%;
 			z-index: -1;
 			rotate: 0deg;
 		}
@@ -285,7 +296,7 @@ section:nth-of-type(3) img:nth-of-type(4) {
 		/* bij */
 		section:nth-of-type(3) img:nth-of-type(4) {
 			width: 8%;
-			translate: 450% -650%;
+			translate: 400% 300%; 
 		}
 }
 
@@ -472,70 +483,119 @@ section:nth-of-type(6) {
 		"omschrijving"
 		"plaatjes";
 	place-items: center;
-	padding-bottom: 7em;
+	margin-top: 3em;
 }
 
 section:nth-of-type(6) h2{
 	grid-area:titel;
 	margin-top:2em;
+	align-self: end;
   }
 
 section:nth-of-type(6) p{
 	grid-area:omschrijving;
 	padding-left: 20%;  /*andere manier vinden */
 	padding-right: 20%; /*andere manier vinden */
+	align-self: start;
   }
 
-section:nth-of-type(6) article{
-	position: relative;
-	grid-area:plaatjes;
+section:nth-of-type(6) figure{
 	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
   }
 
-section:nth-of-type(6) article img {
-	position: relative;
+section:nth-of-type(6) figure img {
 	align-items: center;
 	order: -2;
+	grid-area:plaatjes;
 }
 
-section:nth-of-type(6) article h3{
+section:nth-of-type(6) figure h3{
 	position: absolute;
+	font-size: 2em;
+  }
+
+  /* alle plaatjes */
+  section:nth-of-type(6) figure:nth-of-type(1) img,
+  section:nth-of-type(6) figure:nth-of-type(2) img,
+  section:nth-of-type(6) figure:nth-of-type(3) img {
+	width:60%;
+	border: solid var(--color-wit) 0.2em;
+	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
+	translate: 0% 0%;
   }
 
   /* valley */
-  section:nth-of-type(6) article:nth-of-type(1) img {
-	width:60%;
-	border: solid var(--color-wit) 0.5em;
-	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
-	translate: 0% 0%;
-  } 
-
-
-  /* fishing */
-  section:nth-of-type(6) article:nth-of-type(2) img {
-	width:60%;
-	border: solid var(--color-wit) 0.5em;
-	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;	
-	translate: 0% 100%;
+  section:nth-of-type(6) figure:nth-of-type(1){
+	translate: 10% -70%;
   }
 
-
-  /* town*/
-  section:nth-of-type(6) article:nth-of-type(3) img {
-	width:60%;
-	border: solid var(--color-wit) 0.5em;
-	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
-	translate: 0% 200%;
+   /* fishing */
+  section:nth-of-type(6) figure:nth-of-type(2){
+	translate: -30% -130%;
+	z-index: -1;
+	rotate: -4deg;
+  }
+ 	/* town */
+  section:nth-of-type(6) figure:nth-of-type(3){
+	translate: 20% -240%;
+	z-index: 2;
   }
 
   /* vis*/
-  section:nth-of-type(6) img:nth-of-type(4) {
-	width:30%;
-	translate: 200% 200%;
+  section:nth-of-type(6) img:nth-of-type(1) {
+	width:25%;
+	order: -1;
+	translate: -140% 0%;
+  } 
+
+/* middel formaat */
+  @media (width > 38em){
+	section:nth-of-type(6) {
+		grid-template-areas: 
+		"titel"
+		"omschrijving"
+		"plaatjes";
+		}
+
+	section:nth-of-type(6) figure:nth-of-type(1) img,
+	section:nth-of-type(6) figure:nth-of-type(2) img,
+	section:nth-of-type(6) figure:nth-of-type(3) img{
+		width:55%;
+	}
+
+/* valley */
+	section:nth-of-type(6) figure:nth-of-type(1){
+	translate: 5% -50%;
+ }
+
+/* fishing */
+	section:nth-of-type(6) figure:nth-of-type(2){
+		translate: -25% -80%;
+		z-index: -1;
+		rotate: -4deg;
+ }
+
+/* town */
+  	section:nth-of-type(6) figure:nth-of-type(3){
+		translate: 25% -185%;
+		z-index: 2;
   }
 
+ /* vis*/
+ 	section:nth-of-type(6) img:nth-of-type(1) {
+		width:25%;
+		order: -1;
+		translate: -140% 30%;
+  } 
+ }
 
-  @media (width > 60em){
+
+ /* groot formaat */
+ @media (width > 55em){
 	section:nth-of-type(6) {
 		grid-template-rows:2fr 4fr;
 		grid-template-columns:28em 1fr;
@@ -544,6 +604,77 @@ section:nth-of-type(6) article h3{
 			"titel        plaatjes"
 			"omschrijving plaatjes";
 	}
+
+	section:nth-of-type(6) figure:nth-of-type(1) img,
+	section:nth-of-type(6) figure:nth-of-type(2) img,
+	section:nth-of-type(6) figure:nth-of-type(3) img {
+		width:70%;
+	}
+
+/* valley */
+	section:nth-of-type(6) figure:nth-of-type(1){
+	translate: -10% -65%;
+ }
+
+/* fishing */
+	section:nth-of-type(6) figure:nth-of-type(2){
+		z-index: -1;
+		translate: 70% -170%;
+		rotate: -4deg;
+ }
+
+/* town */
+  	section:nth-of-type(6) figure:nth-of-type(3){
+		translate: 10% -140%;
+		z-index: 2;
+  }
+
+ /* vis*/
+ 	section:nth-of-type(6) img:nth-of-type(1) {
+		width:60%;
+		order: -1;
+		translate: -190% 180%;
+		transform: scaleX(-1);
+  } 	
+  }
+
+
+
+/* grootste formaat */
+  @media (width > 65em){
+	section:nth-of-type(6) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+	}
+
+/* valley */
+	section:nth-of-type(6) figure:nth-of-type(1){
+	translate: -10% -15%;
+ }
+
+/* fishing */
+	section:nth-of-type(6) figure:nth-of-type(2){
+		z-index: -1;
+		translate: 50% -90%;
+		rotate: -4deg;
+		width: 120%;
+ }
+
+/* town */
+  	section:nth-of-type(6) figure:nth-of-type(3){
+		translate: 10% -60%;
+		z-index: 2;
+  }
+
+ /* vis*/
+ 	section:nth-of-type(6) img:nth-of-type(1) {
+		width:40%;
+		translate: -220% 160%;
+  } 	
   }
 
 
@@ -564,67 +695,681 @@ section:nth-of-type(7) {
 	grid-template-areas: 
 		"logo"
 		"titel"
-		"omschrijving";
+		"omschrijving"
+		"plaatjes";
 	place-items: center;
 	background-image: url("../images/kitchen_pattern-tablet.jpg");
 	background: repeat 10;
+	padding-bottom: 2em;
+	
 }
 
 section:nth-of-type(7) h2{
 	grid-area:titel;
+	z-index: 1;
+	margin: 0;
   }
 
 section:nth-of-type(7) p{
 	grid-area:omschrijving;
 	padding-left: 20%;  /*andere manier vinden */
 	padding-right: 20%; /*andere manier vinden */
+	z-index: 1;
   }
+
 
   /* logo */
   section:nth-of-type(7) img {
 	grid-area:logo;
 	width:40%;
+	z-index: 1;
   } 
 
 /* kreeft */
 	section:nth-of-type(7) img:nth-of-type(2){
-		grid-area:omschrijving;
+		grid-area:plaatjes;
 		display: none;
+		z-index: 2;
 	  } 
 
 /* taart */
 section:nth-of-type(7) img:nth-of-type(3){
-	grid-area:omschrijving;
+	grid-area:plaatjes;
 	display: none;
+	z-index: 1;
   } 
 
 /* plank */
 section:nth-of-type(7) img:nth-of-type(4){
 	grid-area:omschrijving;
 	width: 100%;
-	translate: 0% 210%;
+	place-self: end center;
+	translate: 0% 100%;
+  } 
+
+/* stickienote */
+section:nth-of-type(7) img:nth-of-type(5){
+	display: none;
   } 
  
-  @media (width > 60em){
-	section:nth-of-type(6) {
-		grid-template-rows:2fr 4fr;
-		grid-template-columns:28em 1fr;
-		gap:0 1em;
-		grid-template-areas: 
-			"titel        plaatjes"
-			"omschrijving plaatjes";
+  section:nth-of-type(7) button{
+	grid-area:omschrijving;
+	background: var(--gradient-oranje);
+	border: 0.1em solid var(--color-wit);
+	border-bottom: 1px solid var(--color-blauweSchaduw);
+    border-radius: 60px;
+    border-right: 1px solid var(--color-blauweSchaduw);
+    box-shadow: inset 0 0 1px 0 var(--color-blauweSchaduw), 0 3px 1px -3px var(--color-blauweSchaduw);
+    color: var(--color-wit);
+    font-family: kopjes;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    padding: 8px 30px 6px;
+    text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					0 -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px 0 0 var(--color-blauweSchaduw), 
+					1.2px 1.2px 0 var(--color-blauweSchaduw), 
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 0 0 var(--color-blauweSchaduw),
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					1.2px 1.2px 0 var(--color-blauweSchaduw);
+    text-transform: uppercase;
+	z-index: 1;
+	margin-top: 10em;
+	margin-bottom: 2em;
+	cursor:pointer;
+	transition: transform 0.5s ease;
+ } 
+
+section:nth-of-type(7) button:hover {
+transform: scale(1.2);
+cursor: pointer;
+background: var(--gradient-hover-oranje);
+}
+
+/* middel */
+ @media (width > 40em){
+	section:nth-of-type(7) {
+		aspect-ratio: 1/1;
 	}
 
 	/* kreeft */
 	section:nth-of-type(7) img:nth-of-type(2){
-		grid-area:omschrijving;
-		width:10%;
+		width:40%;
 		display: block;
+		translate: -90% -40%;
 	  } 
 
 	/* taart */
 	section:nth-of-type(7) img:nth-of-type(3){
+		display: block;
+		width: 40%;
+		translate: 90% -35%;
+  	} 
+
+	section:nth-of-type(7) p{
+		grid-area:omschrijving;
+		padding-left: 30%;  /*andere manier vinden */
+		padding-right: 30%; /*andere manier vinden */
+		z-index: 1;
+	  }
+
+	/* plank */
+	section:nth-of-type(7) img:nth-of-type(4){
+		place-self: end center;
+		translate: 0% 300%;
+  }
+  } 
+  
+
+
+
+/* Groot */
+  @media (width > 60em){
+
+	section:nth-of-type(7) {
+	grid-template-areas: none;
+	}
+
+	 /* logo */
+	 section:nth-of-type(7) img {
+		grid-area:logo;
+		width:20%;
+		z-index: 1;
+		translate: 0% -110%;
+	  } 
+
+	section:nth-of-type(7) h2{
+		margin: 0;
+		translate: 0% -200%;
+	  }
+	
+	section:nth-of-type(7) p{
+		padding-left: 35%;  /*andere manier vinden */
+		padding-right: 30%; /*andere manier vinden */
+	  }  
+
+	/* kreeft */
+	section:nth-of-type(7) img:nth-of-type(2){
+		width:40%;
+		display: block;
+		translate: -80% 40%;
+	  } 
+
+	/* taart */
+	section:nth-of-type(7) img:nth-of-type(3){
+		display: block;
+		width: 30%;
+		translate: 120% 70%;
+  	} 
+
+  	/* stickienote */
+	section:nth-of-type(7) img:nth-of-type(5){
+		display: block;
+		width: 75%;
+		z-index: 0;
+		translate: -3% -10%;
+  } 
+
+	/* plank */
+	section:nth-of-type(7) img:nth-of-type(4){
+		place-self: end center;
+		translate: 0% 72%;
+		width:100vw;
+
+  } 
+  }
+
+
+
+
+
+
+
+/****************/
+/* Section 8 */
+/****************/
+
+
+section:nth-of-type(8) {
+	display: grid;
+	grid-template-rows:max-content max-content max-content max-content max-content;
+	grid-template-columns:max-content max-content;
+	grid-template-areas: 
+		"decoratielinks  logo   decoratierechts"
+		"omschrijving"
+		"plaatjes";
+	place-items: center;
+	background-image: url("../images/anniversary_achtergrond.jpg");
+	background-size: cover;
+	padding-bottom: 2em;
+	
+}
+
+  /* alles links */
+  /* bij links */
+  section:nth-of-type(8) img:nth-of-type(3) {
+	grid-area:decoratielinks;
+	width:50%;
+	place-self: start;
+	translate: 0% 50%;
+	z-index: 1;
+  } 
+
+   /* paarse ballon links */
+   section:nth-of-type(8) img:nth-of-type(8) {
+	grid-area:decoratielinks;
+	width:25%;
+	place-self: start;
+	translate: -50% 40%;
+	
+  } 
+
+	/* rode ballon links */
+	section:nth-of-type(8) img:nth-of-type(9) {
+		grid-area:decoratielinks;
+		width:25%;
+		place-self: start;
+		translate: -50% 80%;
+		z-index: 2;
+	  } 
+
+
+
+/* alles rechts */
+	/* bij rechts*/
+	section:nth-of-type(8) img:nth-of-type(4) {
+		grid-area:decoratierechts;
+		width:50%;
+		place-self:start end;
+		translate: 0% 50%;
+		z-index: 1;
+	 } 
+
+	/* roze ballon rechts */
+	section:nth-of-type(8) img:nth-of-type(10) {
+		grid-area:decoratierechts;
+		width:10%;
+		place-self: start end;
+		translate: 0% 40%;
+		z-index: 2;
+	} 
+	
+	/* geel ballon rechts */
+	section:nth-of-type(8) img:nth-of-type(11) {
+		grid-area:decoratierechts;
+		width:10%;
+		place-self: start end;
+		translate: 30% 110%;
+		z-index: 1;
+		rotate: -20deg;
+
+	} 
+
+	/* ster ballon rechts */
+	section:nth-of-type(8) img:nth-of-type(12) {
+		grid-area:decoratierechts;
+		width:15%;
+		place-self: start end;
+		translate: 30% 200%;
+		z-index: 1;
+		rotate: -20deg;
+
+	} 
+
+	/* logos bovenin */
+  /* logo hay day */
+  section:nth-of-type(8) img:nth-of-type(5) {
+	grid-area:logo;
+	width:25%;
+	place-self: start center;
+	translate: 0% 90%;
+	z-index: 1;
+  } 
+
+	/* logo cookbook*/
+	section:nth-of-type(8) img:nth-of-type(6) {
+		grid-area:logo;
+		width:45%;
+		place-self: start center;
+		translate: 0% 180%;
+		rotate: -4deg;
+		z-index: 0;
+
+	  }
+	 
+ 	section:nth-of-type(8) p{
+		grid-area:omschrijving;
+		padding-left: 20%;  /*andere manier vinden */
+		padding-right: 20%; /*andere manier vinden */
+		translate: 0% 20%;
+		z-index: 4;
+	  }	  
+	  
+	section:nth-of-type(8) button{
+		grid-area:omschrijving;
+		background: var(--gradient-groen);
+		border: 0.1em solid var(--color-wit);
+		border-bottom: 1px solid var(--color-blauweSchaduw);
+		border-radius: 60px;
+		border-right: 1px solid var(--color-blauweSchaduw);
+		box-shadow: inset 0 0 1px 0 var(--color-blauweSchaduw), 0 3px 1px -3px var(--color-blauweSchaduw);
+		color: var(--color-wit);
+		font-family: kopjes;
+		font-size: 15px;
+		font-weight: 500;
+		letter-spacing: .2px;
+		padding: 8px 30px 6px;
+		text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
+						0 -1.2px 0 var(--color-blauweSchaduw), 
+						1.2px -1.2px 0 var(--color-blauweSchaduw), 
+						1.2px 0 0 var(--color-blauweSchaduw), 
+						1.2px 1.2px 0 var(--color-blauweSchaduw), 
+						0 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 0 0 var(--color-blauweSchaduw),
+						0 1.2px 0 var(--color-blauweSchaduw),
+						-1.2px 1.2px 0 var(--color-blauweSchaduw),
+						1.2px 1.2px 0 var(--color-blauweSchaduw);
+		text-transform: uppercase;
+		z-index: 1;
+		place-self: end center;
+		cursor:pointer;
+		transition: transform 0.5s ease;
+	 } 
+
+	section:nth-of-type(8) button:hover {
+		transform: scale(1.2);
+		cursor: pointer;
+		background: var(--gradient-hover-groen);
+	  }
+
+
+/* kookboek */
+	section:nth-of-type(8) img:nth-of-type(1){
+		grid-area:omschrijving;
+		width: 40%;
+		translate: 0% 120%;
+		margin-bottom: 5em;
+		z-index: 1;
+	  } 
+
+/* shine */
+section:nth-of-type(8) img:nth-of-type(2){
+	grid-area:omschrijving;
+	width: 60%;
+	margin-top: 30em;
+	z-index: 0;
+  } 
+
+/* varkenshoofd */
+section:nth-of-type(8) img:nth-of-type(7){
 	grid-area:omschrijving;
 	display: none;
   } 
+
+
+/* confetti */
+section:nth-of-type(8) img:nth-of-type(13){
+	grid-area:plaatsjes;
+	width: 100%;
+  } 
+
+/* plank */
+section:nth-of-type(8) img:nth-of-type(14){
+	grid-area:plaatsjes;
+	width: 100%;
+	place-self: end center;
+	translate: 0% 120%;
+
+  } 
+ 
+ 
+/* middel */
+ @media (width > 40em){
+	section:nth-of-type(8) {
+		aspect-ratio: 1/1;
+	}
+	/* kookboek */
+	section:nth-of-type(8) img:nth-of-type(1){
+		translate: 0% 100%;
+	  } 
+  }  
+
+
+/* groter */
+@media (width > 45em){
+	section:nth-of-type(8) {
+		aspect-ratio: 1/1;
+	}
+	/* kookboek */
+	section:nth-of-type(8) img:nth-of-type(1){
+		translate: 0% 95%;
+	  } 
   }
+
+
+
+
+  /* nog groter */
+  @media (width > 50em){
+	section:nth-of-type(8) {
+		aspect-ratio: 1/1;
+	}
+	/* kookboek */
+	section:nth-of-type(8) img:nth-of-type(1){
+		translate: 0% 90%;
+	  } 
+
+	/* shine */
+	section:nth-of-type(8) img:nth-of-type(2){
+	width: 55%;
+	margin-top: 35em;
+  } 
+
+	section:nth-of-type(8) p{
+		translate: 0% 50%;
+	  }	 
+	  /* plank */
+	section:nth-of-type(8) img:nth-of-type(14){
+		place-self: end center;
+		translate: 0% 110%;
+  } 
+  } 
+  
+
+/* Grootst */
+   @media (width > 60em){
+
+	/* kookboek */
+	section:nth-of-type(8) img:nth-of-type(1){
+		translate: 100% 100%;
+		width: 30%;
+	} 
+
+	section:nth-of-type(8) p{
+		translate: 0% 260%;
+		z-index: 4;
+		padding-left: 35%;  /*andere manier vinden */
+		padding-right: 35%; /*andere manier vinden */
+	}	 
+
+	/* shine */
+	section:nth-of-type(8) img:nth-of-type(2){
+		grid-area:omschrijving;
+		width: 40%;
+		margin-top: 30em;
+		translate: 80% 0%;
+		z-index: 0;
+	} 	
+
+	/* varkenshoofd */
+	section:nth-of-type(8) img:nth-of-type(7){
+		display: block;
+		width: 30%;
+		translate: -120% 80%;
+  } 
+  section:nth-of-type(8) button{
+	translate: -20% -270%;
+  }
+  section:nth-of-type(8) img:nth-of-type(3),
+  section:nth-of-type(8) img:nth-of-type(4) {
+	translate: 0% -40%;
+  }
+
+  /* plank */
+section:nth-of-type(8) img:nth-of-type(14){
+	place-self: end center;
+	translate: 0% 100%;
+  } 
+}
+
+
+
+
+
+/****************/
+/* Section 9 */
+/****************/
+
+
+section:nth-of-type(9) {
+	display: grid;
+	grid-template-rows: 1fr 2fr max-content;
+	grid-template-areas: 
+		"logo"
+		"omschrijving";
+	place-items: center;
+	background-image: url("../images/achtergrond1_zeebra.jpg");
+	background-size: cover;
+	margin-top: 3em;
+}
+
+section:nth-of-type(9) h2{
+	grid-area:omschrijving;
+	z-index: 1;
+  }
+
+  section:nth-of-type(9) a button{
+	grid-area:omschrijving;
+	background: var(--gradient-groen);
+	border: 0.1em solid var(--color-wit);
+	border-bottom: 1px solid var(--color-blauweSchaduw);
+	border-radius: 60px;
+	border-right: 1px solid var(--color-blauweSchaduw);
+	box-shadow: inset 0 0 1px 0 var(--color-blauweSchaduw), 0 3px 1px -3px var(--color-blauweSchaduw);
+	color: var(--color-wit);
+	font-family: kopjes;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: .2px;
+	padding: 8px 30px 6px;
+	text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					0 -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px -1.2px 0 var(--color-blauweSchaduw), 
+					1.2px 0 0 var(--color-blauweSchaduw), 
+					1.2px 1.2px 0 var(--color-blauweSchaduw), 
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 0 0 var(--color-blauweSchaduw),
+					0 1.2px 0 var(--color-blauweSchaduw),
+					-1.2px 1.2px 0 var(--color-blauweSchaduw),
+					1.2px 1.2px 0 var(--color-blauweSchaduw);
+	text-transform: uppercase;
+	translate: 0% -500%;
+	z-index: 1;
+	cursor:pointer;
+	transition: transform 0.5s ease;
+ }
+
+section:nth-of-type(9) button:hover {
+   transform: scale(1.2);
+   cursor: pointer;
+   background: var(--gradient-hover-groen);
+ }
+
+
+
+ /* logo zeebra */
+ section:nth-of-type(9) img:nth-of-type(1){
+	grid-area:logo;
+	width: 30%;
+	place-self: start center;
+	translate: 0% 20%;
+	z-index: 1;
+  } 
+
+  /* vlag onder logo */
+section:nth-of-type(9) img:nth-of-type(2){
+	grid-area:logo;
+	width: 70%;
+	place-self: start center;
+	translate: 0% 100%;
+	z-index: 1;
+} 
+
+/* achtergrond 2 */
+section:nth-of-type(9) img:nth-of-type(3){
+	grid-area:omschrijving;
+	place-self: end center;
+	width:100vw;
+} 
+
+/* achtergrond 3 */
+section:nth-of-type(9) img:nth-of-type(4){
+	grid-area:omschrijving;
+	place-self: end center;
+	width:100vw;
+} 
+
+
+
+/****************/
+/* Section 10 */
+/****************/
+
+
+section:nth-of-type(10) {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	place-items: center;
+}
+
+section:nth-of-type(10) h2{
+	grid-column-start:1;
+	grid-column-end:-1;
+  }
+
+section:nth-of-type(10) p{
+	grid-column-start:1;
+	grid-column-end:-1;
+	padding: 0% 20% 0% 20%;
+  }
+
+ /* kip  */
+section:nth-of-type(10) img:nth-of-type(1){
+	grid-column-start:1;
+	grid-column-end:-1;
+	width: 70%;
+	margin-top: 2em;
+	order: -1;
+  }
+
+  /* iconen op juiste plek */
+  section:nth-of-type(10) ul:nth-of-type(1) {
+	grid-column: 1 / -1;
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+	padding: 0;
+    margin: 0;
+}
+
+section:nth-of-type(10) ul:nth-of-type(1) li {
+	width: 3em;
+	justify-content: center;
+}
+
+
+
+/* video op de juiste plek */
+section:nth-of-type(10) ul:nth-of-type(2) {
+    display: grid;
+	grid-template-columns:1fr 1fr 1fr; 
+    gap: 1em; 
+    grid-column: 1 / -1;
+    list-style: none;
+	padding: 0;
+	background-color: var(--color-wit);
+}
+
+section:nth-of-type(10) ul:nth-of-type(2) li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	justify-content: center;
+	position: relative;
+	place-items: center;
+}
+
+
+section:nth-of-type(10) ul:nth-of-type(2) li a img {
+    width: 100%;
+	align-items: center;
+}
+
+section:nth-of-type(10) ul:nth-of-type(2) li img {
+    width: 10%;
+	order:1;
+}
+
+section:nth-of-type(10) ul:nth-of-type(2) li h4 {
+    margin-top: 0.5em;
+    text-align: center;
+	font-weight: 200;
+}

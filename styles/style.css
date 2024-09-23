@@ -2,7 +2,7 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box; 
+  box-sizing:border-box;
 }
  
 
@@ -15,10 +15,20 @@
 	--color-donkerbruin:#38322c;
 	--color-beige:#eee;
 	--color-wit:#fff;
+	--color-lichtGrijs:#cdcdcd;
 	--color-blauweSchaduw:rgb(19, 45, 99);
 	--color-achtergrond-light:rgb(251,244,232,255);
 	--color-lichtblauwSchaduw:#87ceec;
-}
+	--gradient-oranje: linear-gradient(0deg, #faac00, #e69702 35%, #e69900 45%, #f9e249 92%);
+	--gradient-hover-oranje: linear-gradient(0deg, #ffbe32, #ffca68 35%, #ffcd68 45%, #f9e249 92%);
+	--gradient-groen: linear-gradient(0deg, #6fcf45, #6ecb45 25%, #78dd4b 45%, #95e46f);
+	--gradient-hover-groen: linear-gradient(0deg, #aaff85, #79ff3f 25%, #9be37d 45%, #c5ffab);
+	--color-achtergrondPagina2: #f9dd55;
+	--color-achtergrondPagina2: #f9dd55;
+	--gradient-tweedePagina: linear-gradient(180deg, #56ccf2, #e0f4fb 90%, #f9dd55);
+	--color-oranjeStrong:#c96b00;
+	  }
+
 
 /*********************/
 /* Fonts */
@@ -47,7 +57,6 @@
 /* main */
 /*********************/
 main {
-	height: 100vh;
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
 	/* overflow-y: scroll; */
@@ -58,12 +67,6 @@ main {
 /*********************/
 /* body */
 /*********************/
-
-body{
-	margin: 0;
-	padding: 0;
-	background-color: var(--color-achtergrond-light);
-}
 
 
 h1{
@@ -101,8 +104,10 @@ font-family: kopjes;
 
 h2{
 	font-family: kopjes;
-	/* font-size:clamp(2em, 3vw, 10em); */
-	font-size: 2em;
+	/* https://websemantics.uk/tools/responsive-font-calculator/?utm_source=pocket_saves */
+	font-size: clamp(35px, calc(2.1875rem + ((1vw - 4px) * 1.6447)), 60px);
+	min-height: 0vw;
+
 	color: var(--color-beige);
 	text-decoration-style: solid;
 	text-shadow: var(--color-blauweSchaduw) -1.5px -1.5px 0px,
@@ -149,6 +154,31 @@ h3{
 	
 }
 
+h4{
+	font-family: paragraaf;
+	font-size: 0.7em;
+	color: var(--color-donkerbruin);
+}
+
+h5{
+	font-family: paragraaf;
+	font-size: 1.5em;
+	color: var(--color-donkerbruin);
+	text-transform: uppercase;
+	font-weight:500;
+	line-height: 139%;
+	padding: 0;
+	margin: 0;
+}
+
+h6{
+	font-family: paragraaf;
+	/* font-size:clamp(0.8em, 2.5vw, 2em); */
+	font-size: 1em;
+	font-weight: 100;
+	color: var(--color-donkerbruin);
+	}
+
 p{
 	font-family: paragraaf;
 	/* font-size:clamp(0.8em, 2.5vw, 2em); */
@@ -156,11 +186,78 @@ p{
 	color: var(--color-donkerbruin);
 	}
 
-	img {
-		max-width:100%;
+img {
+	max-width:100%;
 	}
 
-
-	footer {
-		display:none;
+footer {
+	background-color: var(--color-zwart);
+	padding-left: 10%;
+	padding-right: 10%;
 	}
+
+footer section ul:nth-of-type(1) {
+	display: flex;
+    justify-content: left;
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+	padding-top: 1em;
+}
+
+footer section div:nth-of-type(1){
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+footer section div:nth-of-type(1) li img {
+	display: flex;
+	justify-content: flex-end;	
+	
+}
+
+footer ul li {
+    margin: 0.25em;
+}
+
+footer a{
+font-family: footer;
+font-size: 0.8em;
+margin: 0.25em;
+color: var(--color-lichtGrijs);
+text-decoration: none;
+}
+
+footer a:hover{
+	color: var(--color-wit);
+}
+
+
+
+footer section ul:nth-of-type(2){
+	display: flex;
+	margin-top: 2em;
+	padding-bottom: 2em;
+
+}
+
+footer section ul:nth-of-type(2) li img {
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer section ul:nth-of-type(2) li img:nth-of-type(5) {
+	display: flex;
+	width: 10%;
+	justify-content: flex-end;	
+}
+
+footer section ul:nth-of-type(2) li{
+	list-style: none;
+}
+
+footer section ul:nth-of-type(1) div li:nth-of-type(6){
+	margin: 0;
+	justify-content: flex-end;
+}
