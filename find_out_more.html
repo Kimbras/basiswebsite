@@ -38,10 +38,10 @@
 		<p>Let's come together in the spirit of neighborly giving on a global scale! Join us in the “Play for Trees'' Global Help Event. Revive 100 million trees and bushes together as a community and you will help preserve 1 million real trees in the majestic Lake Kariba ecosystem..</p>
 		
 		<!-- van w3schools https://www.w3schools.com/w3css/w3css_slideshow.asp -->
-		<img class="slideShow" src="images/pagina2/tree_main_slider_1.webp" alt="Tree Picture">
-		<img class="slideShow" src="images/pagina2//tree_main_slider_10.webp" alt="Tree Picture">
-		<img class="slideShow"src="images/pagina2/tree_main_slider_9.webp" alt="Tree Picture">
-		<img class="slideShow"src="images/pagina2/tree_main_slider_8.webp" alt="Tree Picture">
+		<img class="slideShow" src="images/pagina2/tree_main_slider_1.webp" alt="Tree Picture" aria-hidden="true">
+		<img class="slideShow" src="images/pagina2//tree_main_slider_10.webp" alt="Tree Picture" aria-hidden="true">
+		<img class="slideShow"src="images/pagina2/tree_main_slider_9.webp" alt="Tree Picture" aria-hidden="true">
+		<img class="slideShow"src="images/pagina2/tree_main_slider_8.webp" alt="Tree Picture" aria-hidden="true">
 		
 		<button class="buttonleft" onclick="plusDivs(-1)" aria-hidden="true">&#10094;</button>
 		<button class="buttonright" onclick="plusDivs(+1)" aria-hidden="true">&#10095;</button >
@@ -92,11 +92,46 @@
 	<article>
 		<h5>Lake Kariba sounds beatiful!I'd love to know more about it!</h5>
 		<p>The majestic Lake Kariba region is an endangered and critical ecosystem stretching between Zambia and Zimbabwe.</p>
-		<button>read more</button>
-		<img src="images/pagina2/tree_article_1-1.webp" alt="Tree illustration">
+		  <dialog>
+			<button id="closeDialogButton">X</button>
+
+				<!-- Slides -->
+  				<figure class="slideShowFigure">
+					<img src="images/pagina2/dialog1.webp" alt="Slide 1" aria-hidden="true">
+  				</figure>
+  
+ 				 <figure class="slideShowFigure">
+					<img src="images/pagina2/dialog2.webp" alt="Slide 2" aria-hidden="true">
+ 				 </figure>
+
+				  <figure class="slideShowFigure">
+					<img src="images/pagina2/dialog3.webp" alt="Slide 3" aria-hidden="true">
+ 				 </figure>
+
+				<!-- Puntjes/Bolletjes onder de slideshow -->
+				<figcaption>
+  					<span class="dot" onclick="currentSlide(1)"></span> 
+  					<span class="dot" onclick="currentSlide(2)"></span> 
+  					<span class="dot" onclick="currentSlide(3)"></span> 
+				</figcaption>
+
+				<h5>Lake Kariba sounds beautiful! I'd love to know more about it!</h5>
+				<p>The majestic Lake Kariba region is an endangered and critical ecosystem stretching between Zambia and Zimbabwe.</p>
+				<p>The Kariba project is located in northwestern Zimbabwe and it covers a massive 785,000 hectares of forest. That is 1,106,000 football fields!!! It also covers 250,000 hectares of community farm land.</p> 
+				<p>The Lake Kariba region also houses a wide range of biodiversity - 150 mammal, 504 bird, 133 reptile, and 274 butterfly species. In this region there are also three national parks and eight safari reserves. Anti-poaching initiatives have helped protect and increase local wildlife populations, including endangered and vulnerable species like elephants, cheetahs and hippos.</p>
+			<div>
+				<p>If you'd like to know more about <strong>your own</strong> impact, click below!</p>
+				<button>Try Compensate's Calulator</button>
+				<img class="slideShow"src="images/pagina2/boom3.webp" alt="Tree Picture" aria-hidden="true">
+				<img src="images/pagina2/olifant_nijlpaard.png" alt="Landscape illustration of the game">
+			</div>	
+		</dialog>
+
+		  <button id="openDialogButton">Read more</button>
+		<img src="images/pagina2/tree_article_1-1.webp" alt="Tree illustration" aria-hidden="true">
 	</article>		
-		<img src="images/pagina2/kleine_olifant.webp" alt="Landscape illustration of the game">
-		<img src="images/pagina2/boom4.webp" alt="Illuatration of a tree">
+		<img src="images/pagina2/kleine_olifant.webp" alt="Illuatration of a treeLandscape illustration of the game">
+		<img src="images/pagina2/boom3.webp" alt="Illuatration of a tree" aria-hidden="true">
 	</section>
 
 
