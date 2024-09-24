@@ -16,8 +16,8 @@ main section:nth-of-type(1) div:nth-of-type(1){
 	inset: 0;	
 	justify-content: center; /* Center the links horizontally ChatGPT*/
 	align-items: center; /* Center the links vertically ChatGPT*/
-	place-items: center; /* Zent zowel horizontaal als verticaal chatGPT */
 }
+
 main section:nth-of-type(1) {
 	position: relative;
 }
@@ -43,7 +43,7 @@ main section:nth-of-type(1) video{
   }
 
   main section:nth-of-type(1) div:nth-of-type(1) h1{
-	margin-top: 7em;
+	margin-top: 14em;
 	grid-column:1/-1;
   }
 
@@ -54,18 +54,101 @@ main section:nth-of-type(1) video{
 
   main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 	display: block;
-	width: 10em;
-	margin: 0 1em 10em;
+	translate: -10% 0%;
+	width: 26%;
+	max-width: 36%;
+	position: absolute;
 
 	}
 
-	section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
+main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 	display: block;
-	width: 10em;
-	margin: 0 1em 10em;
+	translate: 10% 0%;
+	width: 30%;
+	max-width: 40%;
+	position: absolute;
 	}
 
 
+@media (width > 30em){
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
+		display: block;
+		translate: -20% 40%;
+		width: 26%;
+		position: absolute;
+	
+		}
+	
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
+		display: block;
+		translate: 20% 40%;
+		width: 30%;
+		position: absolute;
+		}
+
+	main section:nth-of-type(1) div:nth-of-type(1) h1{
+		margin-top: 11em;
+		grid-column:1/-1;
+	}
+		
+	 main section:nth-of-type(1) div:nth-of-type(1) h2{
+		margin-top: -0.5em;
+		grid-column:1/-1;
+		}
+	  }
+
+@media (width > 45em){
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
+		display: block;
+		translate: -10% 40%;
+		width: 22%;
+		position: absolute;
+		
+	}
+		
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
+		display: block;
+		translate: 10% 40%;
+		width: 25%;
+		position: absolute;
+	}
+	
+	main section:nth-of-type(1) div:nth-of-type(1) h1{
+		margin-top: 8em;
+		grid-column:1/-1;
+	}
+			
+	 main section:nth-of-type(1) div:nth-of-type(1) h2{
+		margin-top: -0.5em;
+		grid-column:1/-1;
+		}
+	}
+
+@media (width > 55em){
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
+		display: block;
+		translate: -20% 40%;
+		width: 22%;
+		position: absolute;
+	}
+			
+	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
+		display: block;
+		translate: 20% 40%;
+		width: 25%;
+		position: absolute;
+	}
+		
+	main section:nth-of-type(1) div:nth-of-type(1) h1{
+		margin-top: 6em;
+		grid-column:1/-1;
+	}
+				
+	main section:nth-of-type(1) div:nth-of-type(1) h2{
+		margin-top: -0.5em;
+		grid-column:1/-1;
+		}
+	}
 
 
 /****************/
@@ -505,6 +588,8 @@ section:nth-of-type(6) figure{
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	translate: 0;
+	transition: 2s;
   }
 
 section:nth-of-type(6) figure img {
@@ -526,21 +611,23 @@ section:nth-of-type(6) figure h3{
 	border: solid var(--color-wit) 0.2em;
 	box-shadow: var(--color-blauweSchaduw) -5px 1.5px 10px;
 	translate: 0% 0%;
+	
   }
 
+
   /* valley */
-  section:nth-of-type(6) figure:nth-of-type(1){
+  section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
 	translate: 10% -70%;
   }
 
    /* fishing */
-  section:nth-of-type(6) figure:nth-of-type(2){
+  section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 	translate: -30% -130%;
 	z-index: -1;
 	rotate: -4deg;
   }
  	/* town */
-  section:nth-of-type(6) figure:nth-of-type(3){
+  section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
 	translate: 20% -240%;
 	z-index: 2;
   }
@@ -568,19 +655,19 @@ section:nth-of-type(6) figure h3{
 	}
 
 /* valley */
-	section:nth-of-type(6) figure:nth-of-type(1){
+	section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
 	translate: 5% -50%;
  }
 
 /* fishing */
-	section:nth-of-type(6) figure:nth-of-type(2){
+	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		translate: -25% -80%;
 		z-index: -1;
 		rotate: -4deg;
  }
 
 /* town */
-  	section:nth-of-type(6) figure:nth-of-type(3){
+  	section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
 		translate: 25% -185%;
 		z-index: 2;
   }
@@ -612,19 +699,19 @@ section:nth-of-type(6) figure h3{
 	}
 
 /* valley */
-	section:nth-of-type(6) figure:nth-of-type(1){
+	section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
 	translate: -10% -65%;
  }
 
 /* fishing */
-	section:nth-of-type(6) figure:nth-of-type(2){
+	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		z-index: -1;
 		translate: 70% -170%;
 		rotate: -4deg;
  }
 
 /* town */
-  	section:nth-of-type(6) figure:nth-of-type(3){
+  	section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
 		translate: 10% -140%;
 		z-index: 2;
   }
@@ -652,20 +739,20 @@ section:nth-of-type(6) figure h3{
 	}
 
 /* valley */
-	section:nth-of-type(6) figure:nth-of-type(1){
+	section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
 	translate: -10% -15%;
  }
 
 /* fishing */
-	section:nth-of-type(6) figure:nth-of-type(2){
+	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		z-index: -1;
-		translate: 50% -90%;
+		translate: 35% -70%;
 		rotate: -4deg;
-		width: 120%;
+		width: 150%;
  }
 
 /* town */
-  	section:nth-of-type(6) figure:nth-of-type(3){
+  	section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
 		translate: 10% -60%;
 		z-index: 2;
   }
@@ -1064,7 +1151,21 @@ section:nth-of-type(8) img:nth-of-type(2){
 	width: 60%;
 	margin-top: 30em;
 	z-index: 0;
+	animation-name:shine-animation;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear; 
   } 
+
+
+  @keyframes shine-animation {
+	0% {
+	  rotate: 0;
+	}
+	100% {
+	  rotate: 360deg;
+	}
+  }
 
 /* varkenshoofd */
 section:nth-of-type(8) img:nth-of-type(7){
@@ -1332,7 +1433,9 @@ section:nth-of-type(10) img:nth-of-type(1){
 section:nth-of-type(10) ul:nth-of-type(1) li {
 	width: 3em;
 	justify-content: center;
+	filter:invert(100%);
 }
+
 
 
 
@@ -1348,9 +1451,7 @@ section:nth-of-type(10) ul:nth-of-type(2) {
 }
 
 section:nth-of-type(10) ul:nth-of-type(2) li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: grid;
     text-align: center;
 	justify-content: center;
 	position: relative;
@@ -1363,13 +1464,22 @@ section:nth-of-type(10) ul:nth-of-type(2) li a img {
 	align-items: center;
 }
 
-section:nth-of-type(10) ul:nth-of-type(2) li img {
-    width: 10%;
-	order:1;
+section:nth-of-type(10) ul:nth-of-type(2) li > img {
+	position: absolute;
+	place-self: center;
+	grid-row: 1/2;
+    width: 20%;
 }
 
 section:nth-of-type(10) ul:nth-of-type(2) li h4 {
     margin-top: 0.5em;
     text-align: center;
 	font-weight: 200;
+}
+
+@media (prefers-color-scheme:dark) {
+	section:nth-of-type(10) ul:nth-of-type(1) li{
+		/* 1. filter invert */
+		filter:invert(0%);
+	}
 }

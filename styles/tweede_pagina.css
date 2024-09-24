@@ -83,9 +83,29 @@ main section:nth-of-type(1) img:nth-of-type(6){
 	transform: scaleX(-1);
 	translate: -50% 45%;
 	z-index: 1;
-	
-
   } 
+
+
+
+  /* nog groter */
+  @media (width > 50em){
+	main section:nth-of-type(1) img:nth-of-type(1){
+		grid-area:logo;
+		width: 20%;
+		place-self: start center;
+		padding-top: 2em;
+		z-index: 1;
+	  }
+	
+	main section:nth-of-type(1) img:nth-of-type(2){
+		grid-area:logo;
+		width: 25%;
+		translate: 0% 110%;
+		z-index: 1;
+	  }
+  } 
+
+  
 
 /*********************/
 /* Section 2 */
@@ -190,30 +210,46 @@ section:nth-of-type(2) button:nth-of-type(1){
 section:nth-of-type(2) button:nth-of-type(2){
 	translate: 80% -300%;
 }
+
+.slideShow{
+	grid-area: slideshow;
+	width: 80%;
+}
 }
 
 @media (width > 45em){
 	/* button links */
 	section:nth-of-type(2) button:nth-of-type(1){
-		translate: -80% -400%;
+		translate: -80% -500%;
 	}
 	
 	/* button rechts */
 	section:nth-of-type(2) button:nth-of-type(2){
-		translate: 80% -400%;
+		translate: 80% -500%;	
 	}
-			}
+	.slideShow{
+		grid-area: slideshow;
+		width: 70%;
+	}
+}
+
 @media (width > 60em){
 	/* button links */
 	section:nth-of-type(2) button:nth-of-type(1){
-		translate: -80% -600%;
+		translate: -80% -700%;
 	}
 				
 	/* button rechts */
 	section:nth-of-type(2) button:nth-of-type(2){
-		translate: 80% -600%;
+		translate: 80% -700%;
+	}
+
+	.slideShow{
+		grid-area: slideshow;
+		width: 70%;
 	}
 }
+
 
 
 
@@ -224,7 +260,7 @@ section:nth-of-type(2) button:nth-of-type(2){
 /*********************/
 section:nth-of-type(3) {
 	display: grid;
-	gap:2em;
+	place-items: center;
 }
 
 
@@ -234,43 +270,52 @@ section:nth-of-type(3) p:nth-of-type(1){
 
 section:nth-of-type(3) ul{
 	display: grid;
-	list-style: none;
-	grid-template-columns:1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 1em;
+	place-items: center;
 }
 
 section:nth-of-type(3) li{
 	display: grid;
 	list-style: none;
+	margin: 1em;
 	/* padding: 45px 0 25px;
 	position: relative; */
 }
 
 /* fotos goeie grote en aanspreken */
 section:nth-of-type(3) img:nth-of-type(1){
-	width:100%;
+	width:101%;
 	height:auto;
 	align-self:stretch;
 	object-fit:cover;
 	display:block;
   }
 
-  section:nth-of-type(3) img:nth-of-type(2){
-	  width:80%;
-	  /* height: 100% !important; */
+  section:nth-of-type(3) li:nth-of-type(2) img{
+	width:118%;
+	margin-left: -7%;
+	margin-top: 12%;
+	height:auto;
+	align-self:stretch;
+	object-fit:cover;
+	display:block;
 	}
 
 
-section:nth-of-type(3) img:nth-of-type(3){
-	width:100%;
+section:nth-of-type(3) li:nth-of-type(3) img{
+	width:116%;
+	margin-right: -30%;
 	height:auto;
 	align-self:stretch;
 	object-fit:cover;
 	display:block;
   }
 
-section:nth-of-type(3) img:nth-of-type(4){
-	width:100%;
+section:nth-of-type(3) li:nth-of-type(4) img{
+	width:102%;
+	margin-right: -3%;
+	margin-top: 8%;
 	height:auto;
 	align-self:stretch;
 	object-fit:cover;
@@ -279,7 +324,6 @@ section:nth-of-type(3) img:nth-of-type(4){
 
 /* blok1 afbeelding */
 section:nth-of-type(3)li img {
-	grid-row: 1;
 	align-self:stretch;
 	object-fit:cover;
 	width:100%;
@@ -287,19 +331,35 @@ section:nth-of-type(3)li img {
   }
   
 section:nth-of-type(3) li h5 {
-	grid-row: 2;
 	background-color: var(--color-wit);
 	padding: 1em;
-	place-self: end center;
+	order: 2;
+	margin: 0;
   }
 
   /*  p */
 section:nth-of-type(3) li p {
-	grid-row: 3;
 	background-color: var(--color-wit);
+	order: 2;
 	padding: 1.5em;
-	place-self: end center;
   }
+
+  /*  p */
+  section:nth-of-type(3) > p {
+	padding-left: 10%;
+	padding-right: 10%;
+  }
+
+  @media (width > 40em){
+	/* button links */
+	section:nth-of-type(3) ul{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+
+
 
 
 /*********************/
@@ -307,47 +367,65 @@ section:nth-of-type(3) li p {
 /*********************/
 section:nth-of-type(4){
 	display: grid;
-
+	position: relative;
+	place-items: center;
 }
 
 section:nth-of-type(4)  article:nth-of-type(1){
 	display: grid;
-	grid-template-columns:min(100%, 30em);
-	place-items: center;
+	width: 80%;
 }
 
-section:nth-of-type(4) article:nth-of-type(1) img:nth-of-type(1){
-	grid-row: 1;
-	grid-column: 1 / -1;
-  }
-
-  section:nth-of-type(4) h2 {
+section:nth-of-type(4) h2 {
 	margin-top: 2em;
 	margin-bottom: 0.5em;
   }
 
-
+/*  foto bij tekst */
+section:nth-of-type(4) article:nth-of-type(1) > img:nth-of-type(1) {
+	width: 100%;
+	order:-1;
+  }
 
 section:nth-of-type(4) article:nth-of-type(1) h5 {
 	background-color: var(--color-wit);
 	padding: 1em;
-	place-self: end center;
-	grid-row: 2;
-	grid-column: 2 / -2;
   }
 
   /*  p */
-section:nth-of-type(4) article:nth-of-type(1) p {
+section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	background-color: var(--color-wit);
 	padding: 1.5em;
 	margin: 0;
-	place-self: end center;
-	grid-row: 3;
-	grid-column: 2 / -2;
-
   }
 
-section:nth-of-type(4) article:nth-of-type(1) button{
+  #closeDialogButton{
+	border: none;
+	font-family: footer;
+	font-size: 3em;
+	color: var(--color-donkerbruin);
+	font-weight:800;
+	line-height: 139%;
+	padding: 0;
+	margin: 0;
+	transition: transform 0.5s ease;
+	place-self: start end;
+	border: none;
+	background-color: var(--color-wit);
+	position: sticky;
+	translate: 2400% 0%;
+}
+
+#closeDialogButton:hover {
+	color: var(--color-oranjeStrong);
+	transform: scale(1.2);
+	cursor: pointer;
+	display: block;
+	padding: 0 auto;
+  }
+
+
+#openDialogButton{
 	border: none;
 	font-family: paragraaf;
 	font-size: 1.5em;
@@ -358,27 +436,199 @@ section:nth-of-type(4) article:nth-of-type(1) button{
 	padding: 0;
 	margin: 0;
 	background-color: var(--color-wit);
-	grid-row: 4;
-	grid-column: 4 / -4;
 	transition: transform 0.5s ease;
+	
+	border: none;
+	background-color: var(--color-wit);
 }
 
-section:nth-of-type(4) button:hover {
-	transform: scale(1.2);
+#openDialogButton:hover {
+	color: var(--color-oranjeStrong);
 	cursor: pointer;
-	background: var(--color-donkerbruin);
+	display: block;
+	padding: 0 auto;
   }
 
-/* section:nth-of-type(4) img:nth-of-type(1){
-	width: 40%;
-	translate: 150% -30%;
-}  */
+  /* olifant */
+section:nth-of-type(4) > img:nth-of-type(1){
+	max-width: 40%;
+	translate: 80% -30%;
+} 
 
+/* boom */
 section:nth-of-type(4) img:nth-of-type(2){
-	display: grid;
 	width: 100%;
+	translate: -60% 10%;
+	position: absolute;
+} 
+
+@media (width > 50em){
+	section:nth-of-type(4) article{
+		width: 80%;
+		grid-template-columns:1fr 1fr;
+		grid-template-rows:2fr 4fr;
+		max-height: fit-content;
+	}
+
+	/* foto bij tekst */
+	section:nth-of-type(4) article > img:nth-of-type(1){
+		grid-column: 1/-1;
+		grid-row: 1/4;
+		width: 70%;
+		place-self: start;
+		z-index: -1;
+		translate: 20% 0%;
+	}
+
+section:nth-of-type(4) article:nth-of-type(1) h5 {
+		grid-row: 1/-1;
+		grid-column: 1/1;
+	  }
+
+section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
+		grid-row: 2/-1;
+		grid-column: 1/1;
+		margin: 0;
+		padding: 0;
+	  }
+	
+section:nth-of-type(4) article:nth-of-type(1) button {
+		grid-row: 3/-1;
+		grid-column: 1/1;
+		padding-bottom: 1em;
+	  }
+	  /*  p */
+	section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
+		background-color: var(--color-wit);
+		padding: 1.5em;
+		margin: 0;
+	  }
+
+/* boom */
+section:nth-of-type(4) img:nth-of-type(2){
+	width: 60%;
+	translate: 90% 0%;
+	position: absolute;
+	z-index: -1;
+} 
+
+  /* olifant */
+  section:nth-of-type(4) > img:nth-of-type(1){
+	max-width: 40%;
+	translate: 80% -60%;
+} 
 }
 
+/* Dialog slideshow */
+
+   /* De container voor de slideshow */
+   section:nth-of-type(4) figure {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	display: none; /* Verberg standaard alle figuren */
+  }
+
+  /* Stijl voor de afbeeldingen */
+  section:nth-of-type(4) figure img {
+	vertical-align: middle;
+	width: 100%;
+  }
+
+
+  /* De puntjes/bolletjes onder de slideshow */
+  section:nth-of-type(4) figcaption{
+	text-align: center;
+  }
+
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 1em 2px;
+
+	background-color: var(--color-dot);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: var(--color-oranjeStrong); 
+}
+
+.dot.selected {
+    background-color: var(--color-oranjeStrong); 
+}
+
+section:nth-of-type(4) dialog p,
+section:nth-of-type(4) dialog h5{
+	padding: 0 2em 0 2em;
+}
+
+section:nth-of-type(4) dialog p:nth-of-type(3){
+	margin-bottom: 15%;
+}
+
+  /* Fade animatie voor de slides */
+  section:nth-of-type(4) figure {
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+
+
+
+section:nth-of-type(4) div{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+	"omschrijving" 
+	"button";
+	background-color: var(--color-achtergrondPagina2);
+	border-radius: 15px;
+	place-items: center;
+	padding-top: 1em;
+}
+
+section:nth-of-type(4) dialog div p{
+	grid-area: omschrijving;
+	padding: 1.5em;
+	margin: 0;
+
+}
+
+section:nth-of-type(4) dialog div button{
+	background-color: var(--color-donkerbruin);
+    color: var(--color-wit);
+    font-family: paragraaf;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 300px;
+    padding: 20px 40px;
+	border-radius: 60px;
+    width: 100%;
+	transition: transform 0.5s ease;
+	margin-bottom: 2em;
+}
+
+
+section:nth-of-type(4) dialog div button:hover {
+	cursor: pointer;
+	background: var(--color-oranjeStrong);
+}
+
+section:nth-of-type(4) dialog img:nth-of-type(2){
+	z-index: 1;
+	width: 30%;
+	translate: -110% -45%;
+}
+ 
+ 
 
 /*********************/
 /* Section 5 */
