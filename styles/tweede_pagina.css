@@ -726,7 +726,7 @@ section:nth-of-type(6) button{
 	border: 1px var(--color-wit);
     border-bottom: 1px solid var(--color-blauweSchaduw);
     border-radius: 60px;
-    border-right: 1px solid var(--color-donkerbruin);
+    border-right: 1px solid var(--color-donkerbruin-button);
     text-shadow:	-1.2px -1.2px 0 var(--color-blauweSchaduw), 
 						0 -1.2px 0 var(--color-blauweSchaduw), 
 						1.2px -1.2px 0 var(--color-blauweSchaduw), 
