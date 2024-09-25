@@ -5,11 +5,6 @@
   box-sizing:border-box;
 }
  
-@media (prefers-reduced-motion){
-	*{
-		transition: none;
-	}
-	}
 
 /*********************/
 /* Kleuren */
@@ -17,6 +12,8 @@
 :root {
 	/* startje */
 	--color-zwart:#000000;
+	--color-footer:#000000;
+	--color-footer-wit:#fff;
 	--color-donkerbruin:#38322c;
 	--color-dot:#7f7e7c;
 	--color-beige:#eee;
@@ -30,10 +27,32 @@
 	--gradient-groen: linear-gradient(0deg, #6fcf45, #6ecb45 25%, #78dd4b 45%, #95e46f);
 	--gradient-hover-groen: linear-gradient(0deg, #aaff85, #79ff3f 25%, #9be37d 45%, #c5ffab);
 	--color-achtergrondPagina2: #f9dd55;
-	--color-achtergrondPagina2: #f9dd55;
 	--gradient-tweedePagina: linear-gradient(180deg, #56ccf2, #e0f4fb 90%, #f9dd55);
 	--color-oranjeStrong:#c96b00;
 	  }
+
+ @media (prefers-color-scheme:dark) {
+	:root {
+		--color-zwart:#fff;
+		--color-footer:#000000;
+		--color-donkerbruin:#ffffff;
+		--color-donkerbruin-button:#595242;
+		--color-dot:#7f7e7c;
+		--color-beige:#eeeeee;
+		--color-wit:#000;
+		--color-lichtGrijs:#cdcdcd;
+		--color-blauweSchaduw:rgb(19, 45, 99);
+		--color-achtergrond-light:#2f2a6a;;
+		--color-lichtblauwSchaduw:#87ceec;
+		--gradient-oranje: linear-gradient(0deg, #fa6400, #e63f02 35%, #e68600 45%, #f98949 92%);
+		--gradient-hover-oranje: linear-gradient(0deg, #b00c00, #ff4242 35%, #ff5811 45%, #f99549 92%);
+		--gradient-groen: linear-gradient(0deg, #1f6900, #267f00 25%, #2a5517 45%, #38a107);
+		--gradient-hover-groen: linear-gradient(0deg, #428525, #61a045 25%, #4c7a39 45%, #71ae54);
+		--color-achtergrondPagina2: #8e653c;
+		--gradient-tweedePagina: linear-gradient(180deg, #0d0445, #001cd2 90%, #8e653c);
+		--color-oranjeStrong:#123aee;
+		  }
+	}	  
 
 
 /*********************/
@@ -186,7 +205,7 @@ h4{
 h5{
 	font-family: paragraaf;
 	font-size: 1.5em;
-	color: var(--color-donkerbruin);
+	color: var(--color-zwart);
 	text-transform: uppercase;
 	font-weight:500;
 	line-height: 139%;
@@ -202,7 +221,7 @@ h6{
 	/* font-size:clamp(0.8em, 2.5vw, 2em); */
 	font-size: 1em;
 	font-weight: 100;
-	color: var(--color-donkerbruin);
+	color: var(--color-zwart);
 	translate:0 100%;
 	transition: 1s;
 	opacity: 0;
@@ -219,9 +238,10 @@ p{
 
 
 footer {
-	background-color: var(--color-zwart);
+	background-color: var(--color-footer);
 	padding-left: 10%;
 	padding-right: 10%;
+	margin: 0;
 	}
 
 footer section ul:nth-of-type(1) {
@@ -258,7 +278,7 @@ text-decoration: none;
 }
 
 footer a:hover{
-	color: var(--color-wit);
+	color: var(--color-footer-wit);
 }
 
 footer section ul:nth-of-type(2){
@@ -283,4 +303,19 @@ footer section ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 
-
+@media (prefers-reduced-motion){
+	section:nth-of-type(6) figure,
+	section:nth-of-type(7) button,
+	section:nth-of-type(8) button,
+	section:nth-of-type(9) a button,
+	section:nth-of-type(2) button,
+	section:nth-of-type(4) dialog div button,
+	section:nth-of-type(5) button,
+	section:nth-of-type(6) button,
+	#closeDialogButton,
+	#openDialogButton,
+	h2, h2, h3, h4, h5, h6, p,
+	.dot{
+		transition: none;
+	}
+	}

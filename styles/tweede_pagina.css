@@ -142,7 +142,7 @@ section:nth-of-type(2) button{
 	border-radius: 10px;
 	border-right: 1px solid var(--color-blauweSchaduw);
 	box-shadow: inset 0 0 1px 0 var(--color-blauweSchaduw), 0 3px 1px -3px var(--color-blauweSchaduw);
-	color: var(--color-wit);
+	color: var(--color-beige);
 	font-family: kopjes;
 	font-size: 15px;
 	font-weight: 500;
@@ -387,7 +387,7 @@ section:nth-of-type(4) article:nth-of-type(1) > img:nth-of-type(1) {
 	order:-1;
   }
 
-section:nth-of-type(4) article:nth-of-type(1) h5 {
+section:nth-of-type(4) article:nth-of-type(1) > h5 {
 	background-color: var(--color-wit);
 	padding: 1em;
   }
@@ -395,6 +395,7 @@ section:nth-of-type(4) article:nth-of-type(1) h5 {
   /*  p */
 section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	background-color: var(--color-wit);
+	color: var(--color-zwart);
 	padding: 1.5em;
 	margin: 0;
   }
@@ -403,7 +404,6 @@ section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	border: none;
 	font-family: footer;
 	font-size: 3em;
-	color: var(--color-donkerbruin);
 	font-weight:800;
 	line-height: 139%;
 	padding: 0;
@@ -412,8 +412,10 @@ section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	place-self: start end;
 	border: none;
 	background-color: var(--color-wit);
-	position: sticky;
-	translate: 2400% 0%;
+	position: absolute;
+	z-index: 2;
+	justify-self:end;
+	color: var(--color-zwart);
 }
 
 #closeDialogButton:hover {
@@ -429,7 +431,6 @@ section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	border: none;
 	font-family: paragraaf;
 	font-size: 1.5em;
-	color: var(--color-donkerbruin);
 	text-transform: uppercase;
 	font-weight:500;
 	line-height: 139%;
@@ -437,9 +438,8 @@ section:nth-of-type(4) article:nth-of-type(1) > p:nth-of-type(1) {
 	margin: 0;
 	background-color: var(--color-wit);
 	transition: transform 0.5s ease;
-	
 	border: none;
-	background-color: var(--color-wit);
+	color: var(--color-zwart);
 }
 
 #openDialogButton:hover {
@@ -550,20 +550,23 @@ section:nth-of-type(4) img:nth-of-type(2){
 	background-color: var(--color-dot);
 	border-radius: 50%;
 	display: inline-block;
-	transition: background-color 0.6s ease;
+	transition: background-color 0.6s ease forwards;
 }
 
 .dot:hover {
     background-color: var(--color-oranjeStrong); 
 }
 
-.dot.selected {
-    background-color: var(--color-oranjeStrong); 
+
+/* dialog */
+section:nth-of-type(4) dialog {
+	display: gr;
 }
 
 section:nth-of-type(4) dialog p,
 section:nth-of-type(4) dialog h5{
 	padding: 0 2em 0 2em;
+	color: var(--color-footer);
 }
 
 section:nth-of-type(4) dialog p:nth-of-type(3){
@@ -603,8 +606,8 @@ section:nth-of-type(4) dialog div p{
 }
 
 section:nth-of-type(4) dialog div button{
-	background-color: var(--color-donkerbruin);
-    color: var(--color-wit);
+	background-color: var(--color-donkerbruin-button);
+    color: var(--color-beige);
     font-family: paragraaf;
     font-size: 15px;
     font-weight: 500;
@@ -651,8 +654,8 @@ section:nth-of-type(5) h5{
 }
 
 section:nth-of-type(5) button{
-	background-color: var(--color-donkerbruin);
-    color: var(--color-wit);
+	background-color: var(--color-donkerbruin-button);
+    color: var(--color-beige);
     font-family: paragraaf;
     font-size: 18px;
     font-weight: 500;
@@ -735,7 +738,7 @@ section:nth-of-type(6) button{
 						0 1.2px 0 var(--color-blauweSchaduw),
 						-1.2px 1.2px 0 var(--color-blauweSchaduw),
 						1.2px 1.2px 0 var(--color-blauweSchaduw);
-    color: var(--color-wit);
+	color: var(--color-beige);
     font-family: kopjes;
     font-size: 15px;
     font-weight: 500;
