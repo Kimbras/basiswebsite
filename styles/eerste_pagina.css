@@ -801,9 +801,9 @@ section:nth-of-type(6) figure h3{
 /* fishing */
 	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		z-index: -1;
-		translate: 40% -130%;
+		translate: 55% -130%;
 		rotate: -4deg;
-		width: 170%;
+		width: 100%;
  }
  section:nth-of-type(6) figure h3{
 	font-size: 4em;
