@@ -787,11 +787,13 @@ section:nth-of-type(7) {
 		"omschrijving"
 		"plaatjes";
 	place-items: center;
-	background-image: url("../images/kitchen_pattern-tablet.jpg");
 	background: repeat 10;
 	padding-bottom: 2em;
-	
-}
+
+	background-color:var(--grass-background-color);
+	background-image:var(--grass-stripes);
+	  }
+
 
 section:nth-of-type(7) h2{
 	grid-area:titel;
@@ -804,7 +806,6 @@ section:nth-of-type(7) p{
 	padding-left: 20%;  /*andere manier vinden */
 	padding-right: 20%; /*andere manier vinden */
 	z-index: 1;
-	color: var(--color-footer);
   }
 
 
@@ -998,6 +999,14 @@ section:nth-of-type(8) {
 	background-size: cover;
 	padding-bottom: 2em;
 	
+}
+
+@media (prefers-color-scheme:dark) {
+	section:nth-of-type(8) {
+		/* 1. filter invert */
+		background-image: url("../images/anniversary_achtergrond.jpg");
+		filter:invert(100%);
+	}
 }
 
   /* alles links */

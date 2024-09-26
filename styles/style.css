@@ -15,7 +15,6 @@
 	--color-footer:#000000;
 	--color-footer-wit:#fff;
 	--color-donkerbruin:#38322c;
-	--color-donkerbruin:#ffffff;
 	--color-donkerbruin-button:#595242;
 	--color-dot:#7f7e7c;
 	--color-beige:#eee;
@@ -31,6 +30,21 @@
 	--color-achtergrondPagina2: #f9dd55;
 	--gradient-tweedePagina: linear-gradient(180deg, #56ccf2, #e0f4fb 90%, #f9dd55);
 	--color-oranjeStrong:#c96b00;
+
+	--grass-background-color:rgb(251, 110, 110);
+	--grass-stripe-color:rgba(255 255 255 / .1);
+	--grass-stripe-transparent:rgba(255 255 255 / 0);
+	--grass-stripes:
+		repeating-linear-gradient(
+	  	45deg,
+	  	var(--grass-stripe-color) 0 2em,
+	  	var(--grass-stripe-transparent) 2em 4em
+		),
+		repeating-linear-gradient(
+	 		 -45deg,
+	 	 var(--grass-stripe-color) 0 2em,
+	 	 var(--grass-stripe-transparent) 2em 4em
+	);
 	  }
 
  @media (prefers-color-scheme:dark) {
@@ -53,6 +67,8 @@
 		--color-achtergrondPagina2: #8e653c;
 		--gradient-tweedePagina: linear-gradient(180deg, #0d0445, #001cd2 90%, #8e653c);
 		--color-oranjeStrong:#123aee;
+		--grass-background-color:rgb(43, 27, 105);
+	
 		  }
 	}	  
 
@@ -241,9 +257,8 @@ p{
 
 footer {
 	background-color: var(--color-footer);
-	padding-left: 10%;
-	padding-right: 10%;
 	margin: 0;
+	padding: 2em;
 	}
 
 footer section ul:nth-of-type(1) {
