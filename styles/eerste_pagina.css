@@ -173,7 +173,7 @@ section:nth-of-type(2) h2{
 	grid-area:titel;
 	/* grid-row-start: 2; */
 	align-self: end;
-	margin-top: 3em;
+	margin-top: 8em;
   }
 
 section:nth-of-type(2) p{
@@ -209,13 +209,13 @@ section:nth-of-type(2) img{
 
   @media (width > 30em){
 	section:nth-of-type(2) h2{
-		margin-top: 5em;
+		margin-top: 9em;
 	  }
   }
 
   @media (width > 40em){
 	section:nth-of-type(2) h2{
-		margin-top: 6em;
+		margin-top: 9em;
 	  }
   }
 
