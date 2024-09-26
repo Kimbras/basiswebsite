@@ -5,7 +5,11 @@
   box-sizing:border-box;
 }
  
+*:focus{
+	outline: 1px solid var(--color-oranjeStrong);
+	outline-offset: 5px;
 
+}
 /*********************/
 /* Kleuren */
 /*********************/
@@ -246,7 +250,7 @@ h6{
 
 p{
 	font-family: paragraaf;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: var(--color-donkerbruin);
 	translate:0 100%;
 	transition: 1s;
@@ -258,27 +262,29 @@ footer {
 	background-color: var(--color-footer);
 	margin: 0;
 	padding: 2em;
+	place-self: center;
 	}
 
-footer section ul:nth-of-type(1) {
+footer section ul {
 	display: flex;
-    justify-content: left;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0; 
-	padding-top: 1em;
+	text-align: center;
+	align-items:  center;
 }
 
-footer section div:nth-of-type(1){
+
+footer section ul:nth-of-type(2){
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
 
-footer section div:nth-of-type(1) li img {
-	display: flex;
-	justify-content: flex-end;	
-	
+footer section ul:nth-of-type(2) img{
+	width: 100%;
+	margin-top: 2em;
 }
 
 footer ul li {
@@ -295,28 +301,21 @@ text-decoration: none;
 
 footer a:hover{
 	color: var(--color-footer-wit);
+	text-decoration:underline;
 }
 
-footer section ul:nth-of-type(2){
-	display: flex;
-	margin-top: 2em;
+
+footer section ul:nth-of-type(4){
+	margin-top: 1em;
 	padding-bottom: 2em;
-	align-items:  center;
 }
 
-footer section ul:nth-of-type(2) li img {
-	width: 2em;
+footer section ul:nth-of-type(4) li img {
 	margin-left: 0.5em;
-	display: flex;
+	width: 2em;
 }
 
-footer section ul:nth-of-type(2) li{
-	list-style: none;
-}
 
-footer section ul:nth-of-type(2) li:nth-of-type(2){
-	margin-right: auto;
-}
 
 
 @media (prefers-reduced-motion){
@@ -331,7 +330,8 @@ footer section ul:nth-of-type(2) li:nth-of-type(2){
 	#closeDialogButton,
 	#openDialogButton,
 	h2, h2, h3, h4, h5, h6, p,
-	.dot{
+	.dot
+	{
 		transition: none;
 	}
 	}

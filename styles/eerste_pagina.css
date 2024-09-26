@@ -37,13 +37,14 @@ main section:nth-of-type(1) video{
 
  main  section:nth-of-type(1) div:nth-of-type(1) img:nth-of-type(1) {
 	width:clamp(10em, 40vw, 20em);
+	place-self: center;
 	order:-1;
 	grid-column:1/-1;
 	padding-top: 1em;
   }
 
   main section:nth-of-type(1) div:nth-of-type(1) h1{
-	margin-top: 14em;
+	margin-top: 12em;
 	grid-column:1/-1;
   }
 
@@ -73,7 +74,7 @@ main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 @media (width > 30em){
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 		display: block;
-		translate: -20% 40%;
+		translate: -20% 0%;
 		width: 26%;
 		position: absolute;
 	
@@ -81,13 +82,13 @@ main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 	
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 		display: block;
-		translate: 20% 40%;
+		translate: 20% 0%;
 		width: 30%;
 		position: absolute;
 		}
 
 	main section:nth-of-type(1) div:nth-of-type(1) h1{
-		margin-top: 11em;
+		margin-top: 9em;
 		grid-column:1/-1;
 	}
 		
@@ -100,7 +101,7 @@ main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 @media (width > 45em){
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 		display: block;
-		translate: -10% 40%;
+		translate: -10% 0%;
 		width: 22%;
 		position: absolute;
 		
@@ -108,13 +109,13 @@ main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 		
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 		display: block;
-		translate: 10% 40%;
+		translate: 10% 0%;
 		width: 25%;
 		position: absolute;
 	}
 	
 	main section:nth-of-type(1) div:nth-of-type(1) h1{
-		margin-top: 8em;
+		margin-top: 5em;
 		grid-column:1/-1;
 	}
 			
@@ -127,20 +128,20 @@ main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 @media (width > 55em){
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(1) img{
 		display: block;
-		translate: -20% 40%;
-		width: 22%;
+		translate: -10% 0%;
+		width: 13.2%;
 		position: absolute;
 	}
 			
 	main section:nth-of-type(1) div:nth-of-type(1) a:nth-of-type(2) img {
 		display: block;
-		translate: 20% 40%;
-		width: 25%;
+		translate: 10% 0%;
+		width: 15%;
 		position: absolute;
 	}
 		
 	main section:nth-of-type(1) div:nth-of-type(1) h1{
-		margin-top: 6em;
+		margin-top: 4em;
 		grid-column:1/-1;
 	}
 				
@@ -172,7 +173,7 @@ section:nth-of-type(2) h2{
 	grid-area:titel;
 	/* grid-row-start: 2; */
 	align-self: end;
-	margin-top: 5em;
+	margin-top: 3em;
   }
 
 section:nth-of-type(2) p{
@@ -204,6 +205,18 @@ section:nth-of-type(2) img{
 	width:16.7%;
 	/* place-self:end start; */
 	translate:-230% 125%;	
+  }
+
+  @media (width > 30em){
+	section:nth-of-type(2) h2{
+		margin-top: 5em;
+	  }
+  }
+
+  @media (width > 40em){
+	section:nth-of-type(2) h2{
+		margin-top: 6em;
+	  }
   }
 
   @media (width > 60em){
@@ -569,6 +582,7 @@ section:nth-of-type(6) {
 		"plaatjes";
 	place-items: center;
 	margin-top: 3em;
+	margin-bottom: -20em;
 }
 
 section:nth-of-type(6) h2{
@@ -692,6 +706,7 @@ section:nth-of-type(6) figure h3{
 		grid-template-areas: 
 			"titel        plaatjes"
 			"omschrijving plaatjes";
+			margin-bottom: -10em;
 	}
 
 	section:nth-of-type(6) figure:nth-of-type(1) img,
@@ -702,19 +717,19 @@ section:nth-of-type(6) figure h3{
 
 /* valley */
 	section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
-	translate: -10% -65%;
+	translate: -10% -25%;
  }
 
 /* fishing */
 	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		z-index: -1;
-		translate: 70% -170%;
+		translate: 70% -130%;
 		rotate: -4deg;
  }
 
 /* town */
   	section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
-		translate: 10% -140%;
+		translate: 10% -120%;
 		z-index: 2;
   }
 
@@ -725,12 +740,16 @@ section:nth-of-type(6) figure h3{
 		translate: -190% 180%;
 		transform: scaleX(-1);
   } 	
+
+  section:nth-of-type(6) figure h3{
+	font-size: 2em;
+  }
   }
 
 
 
 /* grootste formaat */
-  @media (width > 65em){
+  @media (width > 60em){
 	section:nth-of-type(6) {
 		grid-template-rows:2fr 4fr;
 		grid-template-columns:28em 1fr;
@@ -738,24 +757,25 @@ section:nth-of-type(6) figure h3{
 		grid-template-areas: 
 			"titel        plaatjes"
 			"omschrijving plaatjes";
+		margin-bottom: -15em;
 	}
 
 /* valley */
 	section:nth-of-type(6) figure:nth-of-type(1).inbeeld{
-	translate: -10% -15%;
+	translate: -10% -65%;
  }
 
 /* fishing */
 	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
 		z-index: -1;
-		translate: 35% -70%;
+		translate: 40% -100%;
 		rotate: -4deg;
-		width: 150%;
+		width: 130%;
  }
 
 /* town */
   	section:nth-of-type(6) figure:nth-of-type(3).inbeeld{
-		translate: 10% -60%;
+		translate: 5% -100%;
 		z-index: 2;
   }
 
@@ -766,9 +786,29 @@ section:nth-of-type(6) figure h3{
   } 	
   }
 
+/* grootste formaat */
+@media (width > 65em){
+	section:nth-of-type(6) {
+		grid-template-rows:2fr 4fr;
+		grid-template-columns:28em 1fr;
+		gap:0 1em;
+		grid-template-areas: 
+			"titel        plaatjes"
+			"omschrijving plaatjes";
+		margin-bottom: -15em;
+	}
 
-
-
+/* fishing */
+	section:nth-of-type(6) figure:nth-of-type(2).inbeeld{
+		z-index: -1;
+		translate: 40% -130%;
+		rotate: -4deg;
+		width: 170%;
+ }
+ section:nth-of-type(6) figure h3{
+	font-size: 4em;
+  }
+}
 
 
 
@@ -803,9 +843,9 @@ section:nth-of-type(7) h2{
 
 section:nth-of-type(7) p{
 	grid-area:omschrijving;
-	padding-left: 20%;  /*andere manier vinden */
-	padding-right: 20%; /*andere manier vinden */
+	width: 80%;
 	z-index: 1;
+	translate: 0% -80%;
   }
 
 
@@ -902,10 +942,13 @@ background: var(--gradient-hover-oranje);
 		translate: 90% -35%;
   	} 
 
+	  section:nth-of-type(7) h2{
+		translate: 0% 50%;
+	  }
+
 	section:nth-of-type(7) p{
 		grid-area:omschrijving;
-		padding-left: 30%;  /*andere manier vinden */
-		padding-right: 30%; /*andere manier vinden */
+		width: 60%;
 		z-index: 1;
 	  }
 
@@ -936,12 +979,11 @@ background: var(--gradient-hover-oranje);
 
 	section:nth-of-type(7) h2{
 		margin: 0;
-		translate: 0% -200%;
+		translate: 0% -170%;
 	  }
 	
 	section:nth-of-type(7) p{
-		padding-left: 35%;  /*andere manier vinden */
-		padding-right: 30%; /*andere manier vinden */
+		width: 30%;
 	  }  
 
 	/* kreeft */
@@ -998,7 +1040,6 @@ section:nth-of-type(8) {
 	background-image: url("../images/anniversary_achtergrond.jpg");
 	background-size: cover;
 	padding-bottom: 2em;
-	
 }
  
 @media (prefers-color-scheme:dark) {
@@ -1100,9 +1141,8 @@ section:nth-of-type(8) {
 	 
  	section:nth-of-type(8) p{
 		grid-area:omschrijving;
-		padding-left: 20%;  /*andere manier vinden */
-		padding-right: 20%; /*andere manier vinden */
-		translate: 0% 20%;
+		width: 80%;
+		translate: 0% 70%;
 		z-index: 4;
 	  }	  
 	  
@@ -1149,7 +1189,7 @@ section:nth-of-type(8) {
 	section:nth-of-type(8) img:nth-of-type(1){
 		grid-area:omschrijving;
 		width: 40%;
-		translate: 0% 120%;
+		translate: 0% 100%;
 		margin-bottom: 5em;
 		z-index: 1;
 	  } 
@@ -1158,7 +1198,7 @@ section:nth-of-type(8) {
 section:nth-of-type(8) img:nth-of-type(2){
 	grid-area:omschrijving;
 	width: 60%;
-	margin-top: 30em;
+	margin-top: 18em;
 	z-index: 0;
 	animation-name:shine-animation;
 	animation-duration: 15s;
@@ -1206,9 +1246,20 @@ section:nth-of-type(8) img:nth-of-type(14){
 	}
 	/* kookboek */
 	section:nth-of-type(8) img:nth-of-type(1){
-		translate: 0% 100%;
+		translate: 0% 130%;
+		width: 30%;
 	  } 
+
+	section:nth-of-type(8) p{
+		translate: 0% 170%;
+	  }	
+	  /* shine */
+	section:nth-of-type(8) img:nth-of-type(2){
+	translate: 0% 20%;
+  } 
   }  
+
+
 
 
 /* groter */
@@ -1218,8 +1269,12 @@ section:nth-of-type(8) img:nth-of-type(14){
 	}
 	/* kookboek */
 	section:nth-of-type(8) img:nth-of-type(1){
-		translate: 0% 95%;
+		translate: 0% 120%;
 	  } 
+
+	section:nth-of-type(8) p{
+		translate: 0% 270%;
+	  }	
   }
 
 
@@ -1232,17 +1287,20 @@ section:nth-of-type(8) img:nth-of-type(14){
 	}
 	/* kookboek */
 	section:nth-of-type(8) img:nth-of-type(1){
-		translate: 0% 90%;
+		translate: 0% 100%;
+		width: 40%;
 	  } 
 
 	/* shine */
 	section:nth-of-type(8) img:nth-of-type(2){
 	width: 55%;
+	translate: 0% -5%;
 	margin-top: 35em;
   } 
 
 	section:nth-of-type(8) p{
-		translate: 0% 50%;
+		translate: 0% -1%;
+		width: 40%;
 	  }	 
 	  /* plank */
 	section:nth-of-type(8) img:nth-of-type(14){
@@ -1262,10 +1320,8 @@ section:nth-of-type(8) img:nth-of-type(14){
 	} 
 
 	section:nth-of-type(8) p{
-		translate: 0% 260%;
+		translate: 0% 400%;
 		z-index: 4;
-		padding-left: 35%;  /*andere manier vinden */
-		padding-right: 35%; /*andere manier vinden */
 	}	 
 
 	/* shine */
@@ -1298,8 +1354,19 @@ section:nth-of-type(8) img:nth-of-type(14){
   } 
 }
 
+/* groter */
+@media (width > 65em){
+	section:nth-of-type(8) p{
+		translate: 0% 500%;
+	  }	
+  }
 
-
+/* groter */
+@media (width > 70em){
+	section:nth-of-type(8) p{
+		translate: 0% 700%;
+	  }	
+  }
 
 
 /****************/
@@ -1312,7 +1379,8 @@ section:nth-of-type(9) {
 	grid-template-rows: 1fr 2fr max-content;
 	grid-template-areas: 
 		"logo"
-		"omschrijving";
+		"omschrijving"
+		"button";
 	place-items: center;
 	background-image: 
 		url("../images/achtergrond3_zeebra.png"),
@@ -1338,11 +1406,10 @@ section:nth-of-type(9) {
 
 section:nth-of-type(9) h2{
 	grid-area:omschrijving;
-	z-index: 1;
   }
 
-  section:nth-of-type(9) a button{
-	grid-area:omschrijving;
+  section:nth-of-type(9) a{
+	grid-area:button;
 	background: var(--gradient-groen);
 	border: 0.1em solid var(--color-wit);
 	border-bottom: 1px solid var(--color-blauweSchaduw);
@@ -1367,13 +1434,14 @@ section:nth-of-type(9) h2{
 					-1.2px 1.2px 0 var(--color-blauweSchaduw),
 					1.2px 1.2px 0 var(--color-blauweSchaduw);
 	text-transform: uppercase;
-	translate: 0% -500%;
 	z-index: 1;
 	cursor:pointer;
 	transition: transform 0.5s ease;
+	margin-bottom: 3em;
+	text-decoration: none;
  }
 
-section:nth-of-type(9) button:hover {
+section:nth-of-type(9) a:hover {
    transform: scale(1.2);
    cursor: pointer;
    background: var(--gradient-hover-groen);
@@ -1398,21 +1466,6 @@ section:nth-of-type(9) img:nth-of-type(2){
 	translate: 0% 100%;
 	z-index: 1;
 } 
-
-/* achtergrond 2 */
-section:nth-of-type(9) img:nth-of-type(3){
-	grid-area:omschrijving;
-	place-self: end center;
-	width:100vw;
-} 
-
-/* achtergrond 3 */
-section:nth-of-type(9) img:nth-of-type(4){
-	grid-area:omschrijving;
-	place-self: end center;
-	width:100vw;
-} 
-
 
 
 /****************/
