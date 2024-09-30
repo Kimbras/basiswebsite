@@ -110,9 +110,13 @@ main {
   }
 
 
+
 /*********************/
 /* body */
 /*********************/
+body{
+	overflow-x: hidden;
+}
 
 .inbeeld{
 	opacity:1;
