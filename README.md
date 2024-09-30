@@ -85,12 +85,6 @@ WCAG checklist
   ### de hele pagina: 
   <img src="readme-images/haydaywebsite_web_homepagina.jpg" width="375px" alt="breakdown van de homepagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
 </details>
 
 
@@ -111,7 +105,7 @@ WCAG checklist
  
   | Choice         | Debora             | Jelle        | Kim               |
   | ---            | ---                | ---          | ---               |
-  | HTML           |  HTML              | HTML         | HTML              |  
+  | was er niet    |  HTML              | HTML         | HTML              |  
   |                |                    |              | github error      |
    
 
@@ -147,21 +141,17 @@ Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
+ | Choice         | Debora                  | Jelle        | Kim                 |
+  | ---            | ---                    | ---          | ---                 |
+  | HTML           |  tekst bepaalde plek   | Svg bestandje| hoe fix ik de gaten |  
+  |                |                        |              | github error        |
+   
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
+- Foto’s moet ik kijken of dat veel ruimte inneemt heeft te maken met de translate 
+- Figure gebruiken ipv article.
+- Clame gebruiken voor bepaalde lettertypes van Websemantics.uk
 </details>
 
 
@@ -176,10 +166,15 @@ Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+Tijdens de test kwam ik erachter dat ik ondanks dat ik dacht dat de site bijna klaar zou zijn erachter dat ik nog meerder dingen moest doen zoals:
+- ik heb nog gekeken naar mijn footer want die stak nog een stuk uit waardoor je horizontaal kan scrollen.
+- ik heb een focus stijl nog toegevoegd.
+- ook kwam ik erachter dat de video een autoplay heeft, die heb ik laten staan met overleg van Sanne, dat is meer een oplossing voor een ander moment
+- voor de autoplay moet er een reduce motion komen wat een andere keer opgelost moet worden
+- een skip link is voor mijn pagina niet nodig, omdat het geen header heeft dus dat is daarom een beetje onnodig.
+- ook ga ik kijken naar een oplossing om mijn 2e pagina in een apart scherm in de laten komen. 
+
 </details>
-
-
-
 
 
 ## Voortgang 3 (week 4)
@@ -194,20 +189,19 @@ Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Choice                 | Debora                  | Jelle         | Kim             
+  | ---                  | ---                     | ---            | ---                |
+  | HTML                 |  Blokken gelijk krijgen | Blokken gelijk | Horizontale scroll |  
+  | Website laten zien   |                         |                | scroll animatie    |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  
+  - wat ik heb geleerd is het volgende : hidden te schrijven
+  - ook heb ik geleerd hoe ik een scroll animatie kan maken via https://scroll-driven-animations.style/demos/image-reveal/css/
+  - met de hand van keyframes kan ik een animatie maken
+  - kleuren light en dark mode heeft hij laten zien
 
 </details>
 
@@ -221,19 +215,28 @@ Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindproduct.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ Ik heb geleerd om met grid om te gaan en hiervoor verschillende schermen te maken. Ook vond ik het black and light functie heel intersant wat ik heb geleerd. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/klein.png" width="375px" alt="verschillende scherm voormaten, klein">
+  <img src="readme-images/middel.png" width="375px" alt="verschillende scherm voormaten, middel">
+  <img src="readme-images/groot.png" width="375px" alt="verschillende scherm voormaten, groot">
+
+  <img src="readme-images/licht.png" width="375px" alt="licht modes">
+  <img src="readme-images/donker.png" width="375px" alt="donkere modes">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+Wat niet is gelukt is het helemaal responsive maken van de website, soms vallen de teksten nog over elkaar heen. Dit heb ik zo veel mogelijk proberen op te lossen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/watkanbeter.png" width="375px" alt="De tekst over de plaatjes kan beter">
+
+  ### Ingevulde WCAG checklist:
+  <iframe src="readme-image/WCAG_Checklist.pdf" width="600" height="500"></iframe>
+  <figcaption>Ingevulde WCAG checklist</figcaption> <!-- chatgpt -->
 </details>
 
 
@@ -249,8 +252,11 @@ Punten die uit de meeting zijn gekomen waar ik op moet letten zijn:
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. [bron 1](https://websemantics.uk/tools/responsive-font-calculator/?utm_source=pocket_saves)
+  2. [bron 2](https://www.w3schools.com/w3css/w3css_slideshow.asp)
+  3. [bron 3](https://blog.webdevsimplified.com/2022-01/intersection-observer/)
+  4. [bron 4](https://www.w3schools.com/w3css/w3css_slideshow.asp)
+  5. [bron 5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+  6. [bron 6](https://openai.com/chatgpt/)
 
 </details>
