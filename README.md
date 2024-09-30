@@ -235,8 +235,11 @@ Wat niet is gelukt is het helemaal responsive maken van de website, soms vallen 
   <img src="readme-images/watkanbeter.png" width="375px" alt="De tekst over de plaatjes kan beter">
 
   ### Ingevulde WCAG checklist:
-  <iframe src="readme-image/WCAG_Checklist.pdf" width="600" height="500"></iframe>
-  <figcaption>Ingevulde WCAG checklist</figcaption> <!-- chatgpt -->
+  <img src="readme-images/pagina1_WCAG.jpg" width="375px" alt="pagina 1 WCAG checklist">
+  <img src="readme-images/pagina2_WCAG.jpg" width="375px" alt="pagina 2 WCAG checklist">
+  <img src="readme-images/pagina3_WCAG.jpg" width="375px" alt="pagina 3 WCAG checklist">
+  <img src="readme-images/pagina4_WCAG.jpg" width="375px" alt="pagina 4 WCAG checklist">
+  <img src="readme-images/pagina5_WCAG.jpg" width="375px" alt="pagina 5 WCAG checklist">
 </details>
 
 
